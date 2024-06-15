@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Практическое задание 3.1</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form action="https://testform.stanislavsivin.ru" method="POST">
+        <label for="firstName">*Имя</label><br>
+        <input type="text" size="30" id="firstName" name="firstName"><br><br>
+        <label for="lastName">*Фамилия</label><br>
+        <input type="text" size="30" id="lastName" name="lastName"><br><br>
+        <label for="mail">*E-mail:</label><br>
+        <input type="text" size="30" id="mail" name="mail"><br><br>
+        <label for="pass">*Пароль:</label><br>
+        <input type="password" size="30" id="pass" name="pass"><br><br>
+        <label for="passRepeat">*Повтор пароля:</label><br>
+        <input type="password" size="30" id="passRepeat" name="passRepeat"><br><br>
+        <p>Укажите пол:</p>
+        <input type="radio" value="female" name="gender" id="female">
+        <label for="female">Женский</label><br>
+        <input type="radio" value="male" name="gender" checked="checked" id="male">
+        <label for="male">Мужской</label><br>
+        <input type="radio" value="undisclosed" name="gender" id="none">
+        <label for="none">Не указывать</label><br>
+        <p>Укажите ваше хобби:</p>
+        <input type="checkbox" name="reading" id="reading">
+        <label for="reading">Чтение</label><br>
+        <input type="checkbox" name="sport" id="sport">
+        <label for="sport">Спорт</label><br>
+        <input type="checkbox" name="games" id="games" checked="checked">
+        <label for="games">Компьютерные игры</label><br>
+        <input type="checkbox" name="tv" id="tv">
+        <label for="tv">Телевидение</label><br>
+        <input type="checkbox" name="movies" id="movies">
+        <label for="movies">Кинофильмы</label><br>
+        <p><span>Укажите год рождения</span>
+            <select name="birth">
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992" selected="selected">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+            </select>
+        </p>
+        <p>Укажите города проживания</p>
+        <select size="6" multiple="multiple" name="town">
+            <option value="Moscow">Москва</option>
+            <option value="Nursultan">Нурсултан</option>
+            <option value="NewYork">Нью-Йорк</option>
+            <option value="SaintPetersburg">Санкт-Петербург</option>
+            <option value="Berlin">Берлин</option>
+        </select>
+        <p>Оставьте Ваш комментарий</p>
+        <textarea rows="5" cols="25" name="comment">Введите свой комментарий</textarea>
+        <p>Ваша фотография</p>
+        <input type="file" name="avatar" size="15"><br><br>
+        <input type="reset" value="Очистить">
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
