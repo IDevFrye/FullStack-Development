@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Костин] СР№3</title>
+</head>
+<body>
+    <form action="https://testform.stanislavsivin.ru" method="POST">
+        <fieldset>
+            <legend>Выбор модели:</legend>
+            <label for="model">Выберите машину:</label><br>
+            <select name="model" id="model">
+                <option value="0">Lada</option>
+                <option value="1">Москвич</option>
+                <option value="2">УАЗ</option>
+                <option value="3">BMW</option>
+                <option value="4">Chery</option>
+                <option value="5">Mersedes</option>
+                <option value="6">Mazeratti</option>
+                <option value="7">Fiat</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Характеристика машины:</legend>
+            <label for="boxSelection">Коробка</label><br>
+            <select name="boxSelection" id="boxSelection" size="4" multiple>
+                <option value="1">Механика</option>
+                <option value="2">Классический автомат</option>
+                <option value="3">Вариатор</option>
+                <option value="4">Робот</option>
+            </select>
+            <p>
+                <label for="distance">Пробег</label><br>
+                <input type="text" name="distanceStart" size="5" id="distanceStart" placeholder="от">
+                <input type="text" name="distanceEnd" size="5" id="distanceEnd" placeholder="до">
+            </p>
+            <p style="margin-bottom: 0">
+                <label for="volume">Объём</label><br>
+                <input type="text" name="volumeStart" size="5" id="volumeStart" placeholder="от">
+                <input type="text" name="volumeEnd" size="5" id="volumeEnd" placeholder="до">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Ценовой сегмент машины:</legend>
+            <p style="margin: 0">
+                <label for="price">Цена</label><br>
+                <input type="text" name="priceStart" size="5" id="priceStart" placeholder="от">
+                <input type="text" name="priceEnd" size="5" id="priceEnd" placeholder="до">
+            </p>
+        </fieldset><br>
+        <button type="submit">Найти</button>
+        <button type="reset">Очистить</button>
+    </form>
+</body>
+</html>
