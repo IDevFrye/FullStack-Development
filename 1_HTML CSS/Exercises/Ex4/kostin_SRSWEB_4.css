@@ -1,0 +1,74 @@
+.header_menu ul{
+    margin: 50px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header_menu ul li{
+    display: inline-block;
+    padding: 0px 17px;
+}
+
+.header_menu ul li a{
+    color: rgb(0, 0, 0);
+    font-family: Roboto, cursive, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header_menu a.current_page {
+    color: rgb(229, 181, 0);
+    font-weight: 700;
+}
+
+.header_menu a:active {
+    font-weight: 700;
+}
+
+.header_menu a:hover {
+    color: rgb(229, 181, 0);
+}
+
+.texts {
+    color: rgb(81, 82, 82);
+    font-family: Roboto, cursive, sans-serif;
+    margin-left: 145px;
+    margin-right: 145px;
+    margin-top: 57px;
+}
+
+.texts h1 {
+    width: 620.78px;
+    height: 56px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 52px;
+}
+
+.texts p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text_1 .text_2{
+    width: 1150px;
+    height: 126px;
+}
+
+div[class^="text_"] p:nth-of-type(2) {
+    text-indent: 5px;
+}
