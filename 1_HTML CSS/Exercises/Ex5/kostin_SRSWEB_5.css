@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+/**********Header*********/
+
+.header {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 26px 130px 0px 130px;
+}
+
+.header::after {
+    clear:both;
+    content: " ";
+    display:block;
+}
+
+.logo, .menu, .social {
+    float: left;
+}
+
+/*************logo*************/
+.logo {
+    width: 25%;
+}
+
+.logo_title {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: -3.42px;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0 0 0 0;
+}
+
+/*************menu***************/
+.menu {
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 11px 0 0 14px;
+}
+
+.menu .menu_item {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 32px;
+    letter-spacing: -0.1px;
+}
+
+.menu_item a:hover{
+    color:rgb(63, 65, 166);
+}
+
+.menu .menu_link {
+    color: rgb(26, 9, 62);
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+}
+
+/*********social*********/
+.social {
+    width: 15%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.social_button {
+    border: 2px solid rgb(63, 65, 166);
+    border-radius: 22.5px;
+    padding: 9px 5px 6px 19px;
+    text-decoration: none;
+    color: rgb(63, 65, 166);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: inline-block;
+    margin: -3px 3px 0px 30px;
+}
+
+.social_button-triangle {
+    font-size: 37px;
+    padding: 0;
+    line-height: 37px;
+    vertical-align: middle;
+}
+
+.social_button-text {
+    vertical-align: middle;
+    padding: 0 3px 0 0;
+}
