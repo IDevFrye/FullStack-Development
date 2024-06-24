@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №5.6 Изменение порядке flexbox элементов</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .container div {
+            border: 1px solid #000;
+            padding: 55px;
+            background-color: red;
+            color: #fff;
+            margin: 15px;
+            order: 5;
+        }
+
+        .container div:nth-child(5) {
+            order: 1;
+        }
+
+        .container div:nth-child(3) {
+            order: 2;
+        }
+
+        .container div:nth-child(4) {
+            order: 3;
+        }
+
+        .container div:nth-child(1) {
+            order: 4;
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

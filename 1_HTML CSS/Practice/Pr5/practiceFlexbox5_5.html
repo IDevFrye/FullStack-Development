@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №5.5 Вложенные flexbox</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: rgb(227, 255, 149);
+        }
+
+        header>h1 {
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+
+        main aside {
+            width: 20%;
+            background-color: rgb(238, 140, 140);
+        }
+
+        main section {
+            width: 80%;
+            background-color: rgb(123, 123, 238);
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgb(156, 241, 156);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Наша первая страничка на flexbox</h1>
+    </header>
+    <main>
+        <aside>
+            <ul>
+                <li>Главная</li>
+                <li>Новости</li>
+                <li>Фото</li>
+                <li>Видео</li>
+                <li>Контакты</li>
+            </ul>
+        </aside>
+        <section>
+            <article>
+                <h2>Наша первая страничка на flexbox</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+                    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                    Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+                    porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
+                    feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
+                    imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+                    rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                    adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+                    Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
+                    quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet
+                    nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                    nunc,</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>111@mail.ru</p>
+    </footer>
+</body>
+</html>
