@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Практическая работа 7.2</title>
+    <meta charset="utf-8" />
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            background-color: teal;
+
+        }
+
+        .container {
+            width: 950px;
+            position: relative;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        aside.rightSide {
+            width: 200px;
+            float: right;
+        }
+
+        aside.rightSide ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 15px;
+        }
+
+        aside.rightSide ul>li>a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border: 1px solid #fefefe;
+            display: block;
+            padding: 15px 30px;
+            text-align: center;
+        }
+
+        aside.rightSide ul>li>a:hover {
+            font-weight: bold;
+            background-color: teal;
+            color: #fefefe;
+            font-size: 18px;
+        }
+
+        section {
+            width: 748px;
+            height: auto;
+            float: left;
+            border-left: 1px solid #fefefe;
+            border-right: 1px solid #fefefe;
+            counter-reset: list 0;
+            padding-bottom: 15px;
+        }
+
+        article {
+            margin-bottom: 72px;
+            padding-left: 15px;
+            padding-right: 30px;
+        }
+
+        article:first-child>h3 {
+            margin-top: 0;
+            padding-top: 30px;
+        }
+
+        article>h3>span:before {
+            counter-increment: list;
+            content: "Статья " counter(list) ": ";
+        }
+
+        article a {
+            text-align: center;
+            float: right;
+            background-color: red;
+            padding: 10px 18px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            min-height: 100%;
+            background-color: #ccc;
+        }
+
+        .clearing {
+            height: 200px;
+            clear: both;
+        }
+
+        footer {
+            border-top: 5px solid blue;
+            width: 950px;
+            height: 195px;
+            margin-top: -200px;
+        }
+
+        .firstMenu,
+        .rightMenu,
+        .centerMenu {
+            display: block;
+            padding-top: 25px;
+        }
+
+        .firstMenu {
+            float: left;
+            width: 250px;
+            margin-left: 50px;
+        }
+
+        .rightMenu {
+            float: right;
+            width: 250px;
+            margin-right: 50px;
+        }
+
+        .centerMenu {
+            margin: 0 0 0 50px;
+            float: left;
+        }
+
+        footer nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer nav ul a {
+            text-decoration: none;
+            color: black;
+        }
+
+        footer nav ul a:hover {
+            text-decoration: underline;
+        }
+
+        footer nav p {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Использованные свойства как примеры работы с печатью:
+            1. page-break-after: always; (разрыв после элемента)
+            2. page-break-before: always; (разрыв перед элементом)
+            3. page-break-inside: avoid; (избегание разрывы страницы внутри элемента)
+            4. orientation:portrait; (книжная ориентация)
+            5. orientation:landscape; (альбомная ориентация)
+            6. display: none; (убираем лишнее, напр., навигацию)
+            7. content: " (" attr(href) ")"; (вывод ссылок)
+        */
+
+        /* Книжная ориентация шаблона */
+        @media print and (orientation:portrait) {
+            main {
+                background-color:lime;
+            }
+            main section article a[href]:after {
+                content: " (" attr(href) ")";
+            }
+            aside, footer, section>h2 {
+                display: none;
+            }
+            section {
+                border: none;
+                width: 100%;
+            }
+        }
+        /* Альбомная ориентация шаблона*/
+        @media print and (orientation:landscape) {
+            main {
+                background-color:lime;
+            }
+            /*Вариант №1 page-break-after*/
+            main section article:nth-child(4) {
+                page-break-after: always;
+            }
+
+            /*Вариант №2 page-break-before*/
+            /*main section article:nth-child(5) {
+                page-break-before: always;
+            } */
+            
+            /*Вариант №3 page-break-inside*/
+            /*main section article{
+                page-break-inside: avoid;
+            }*/
+
+            main section article a[href]:after {
+                content: " (" attr(href) ")";
+            }
+
+            aside, footer, section>h2 {
+                display: none;
+            }
+            section {
+                border: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section>
+                <h2>Список статей</h2>
+                <article>
+                    <h3><span class="counter"></span>Наша статья</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#">Подробнее</a>
+                </article>
+                <article>
+                    <h3><span class="counter"></span>Наша статья</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#">Подробнее</a>
+                </article>
+                <article>
+                    <h3><span class="counter"></span>Наша статья</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#">Подробнее</a>
+                </article>
+                <article>
+                    <h3><span class="counter"></span>Наша статья</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a href="#">Подробнее</a>
+                </article>
+            </section>
+            <aside class="rightSide">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Фото</a></li>
+                    <li><a href="#">Видео</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </aside>
+            <div class="clearing"></div>
+        </main>
+        <footer>
+            <nav class="firstMenu">
+                <p>Информация о компании</p>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Видеотека</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <nav class="centerMenu">
+                <p>Магазин</p>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Смартфоны</a></li>
+                    <li><a href="#">Планшеты</a></li>
+                    <li><a href="#">Ноутбуки</a></li>
+                    <li><a href="#">Десктопу</a></li>
+                </ul>
+            </nav>
+            <nav class="rightMenu">
+                <p>Мой аккаунт</p>
+                <ul>
+                    <li><a href="#">Личный кабинет</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Сообщения</a></li>
+                    <li><a href="#">Настройки</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
