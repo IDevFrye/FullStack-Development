@@ -1,0 +1,32 @@
+html {
+    font-size: 16px;
+}
+
+ul {
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    color: black;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-align: center;
+    padding: 0px 25px;
+    text-decoration: none;
+}
+    
+ul li:hover {
+    color: blue;
+    cursor: pointer;
+}
+    
+ul li i {
+    display: block !important;
+    font-size: 3rem;
+    color: blue;
+}
+    
+ul li:hover i {
+    color: black;
+}
