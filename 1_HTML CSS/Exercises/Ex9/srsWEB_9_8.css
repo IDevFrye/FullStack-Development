@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* Убирает все отступы и поля для всех элементов, чтобы обеспечить точное выравнивание */
+}
+
+body {
+    perspective: 900px;
+    perspective-origin: center -5em;
+    /* Устанавливает перспективу для трехмерных преобразований и смещает ее центр вверх на 5em */
+}
+
+.container {
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 100px;
+    left: 250px;
+    /* Устанавливает сохранение трехмерного пространства для дочерних элементов, 
+    анимацию вращения вокруг оси Y, размеры и позицию контейнера */
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+        /* Определяет анимацию, которая вращает элемент на 360 градусов вокруг оси Y */
+    }
+}
+
+div.side {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    position: absolute;
+    outline: 1px solid #000;
+    outline-offset: 25px;
+    opacity: 0.8;
+    /* Устанавливает размеры, фон, абсолютное позиционирование, рамку с отступом и прозрачность для сторон куба */
+}
+
+.front {
+    background: url("images/pic6.png");
+    /* Устанавливает фоновое изображение для передней стороны куба */
+}
+
+.left {
+    transform: translateX(-100px) rotateY(90deg) translateX(100px);
+    background: url("images/pic1.png");
+    /* Перемещает левую сторону куба влево на 100px, поворачивает на 90 градусов вокруг оси Y, 
+    затем возвращает на 100px вправо и устанавливает фоновое изображение */
+}
+
+.right {
+    transform: translateX(100px) rotateY(90deg) translateX(100px);
+    background: url("images/pic2.png");
+    /* Перемещает правую сторону куба вправо на 100px, поворачивает на 90 градусов вокруг оси Y, 
+    затем перемещает еще на 100px вправо и устанавливает фоновое изображение */
+}
+
+.up {
+    transform: translateY(-100px) rotateX(90deg) translateY(-100px);
+    background: url("images/pic3.png");
+    /* Перемещает верхнюю сторону куба вверх на 100px, поворачивает на 90 градусов вокруг оси X, 
+    затем перемещает еще на 100px вверх и устанавливает фоновое изображение */
+}
+
+.down {
+    transform: translateY(100px) rotateX(90deg) translateY(-100px);
+    background: url("images/pic4.png");
+    /* Перемещает нижнюю сторону куба вниз на 100px, поворачивает на 90 градусов вокруг оси X, 
+    затем перемещает на 100px вверх и устанавливает фоновое изображение */
+}
+
+.back {
+    transform: translateZ(-200px);
+    background: url("images/pic5.png");
+    /* Перемещает заднюю сторону куба назад на 200px и устанавливает фоновое изображение */
+}

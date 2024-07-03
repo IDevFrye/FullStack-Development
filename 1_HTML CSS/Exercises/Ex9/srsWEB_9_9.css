@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    /* Убирает все отступы и поля для всех элементов и устанавливает шрифт sans-serif */
+}
+
+body {
+    text-align: center;
+    /* Выравнивает текст в теле документа по центру */
+}
+
+h1 {
+    margin: 35px auto;
+    text-align: center;
+    /* Устанавливает отступы для заголовка и выравнивает его по центру */
+}
+
+.container__persona {
+    perspective: 1000px;
+    width: 250px;
+    height: 300px;
+    margin: 0 15px;
+    display: inline-block;
+    /* Устанавливает перспективу для трехмерных эффектов, размеры контейнера,
+       отступы и делает его блочным элементом */
+}
+
+.persona {
+    position: relative;
+    cursor: pointer;
+    width: 250px;
+    height: 300px;
+    transition: 1s;
+    transform-style: preserve-3d;
+    /* Устанавливает относительное позиционирование, курсор указателя, размеры,
+       анимацию перехода за 1 секунду и сохранение трехмерного пространства для дочерних элементов */
+}
+
+.container__persona:hover .persona {
+    transform: rotateY(180deg);
+    /* При наведении на контейнер вращает дочерний элемент на 180 градусов по оси Y */
+}
+
+.persona__foto {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    /* Устанавливает размеры, скрывает переполнение, относит на передний план,
+       абсолютное позиционирование, скрывает заднюю часть элемента и скругляет углы */
+}
+
+.persona__info {
+    background-color: #000;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 15px;
+    /* Устанавливает черный фон, размеры, выравнивание текста по центру, абсолютное позиционирование,
+       относит на задний план, скрывает заднюю часть элемента, поворачивает его на 180 градусов и скругляет углы */
+}
+
+.persona__info>h3 {
+    padding-top: 15px;
+    color: #f3f3f3;
+    /* Устанавливает верхний отступ для заголовка и белый цвет текста */
+}
+
+.persona__info>a {
+    color: #f3f3f3;
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    /* Устанавливает белый цвет текста для ссылок, делает их блочными,
+       центрует и убирает подчеркивание */
+}
+
+.persona__info>a>i {
+    color: #fff;
+    font-size: 32px;
+    display: block;
+    margin-bottom: 10px;
+    /* Устанавливает белый цвет текста для иконок, размер шрифта 32px,
+       делает их блочными и добавляет нижний отступ */
+}
