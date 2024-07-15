@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: black;
+}
+
+/*-----------Header-------------*/
+header {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    padding: 0px 99px 5px 99px;
+}
+
+.header__logoText {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.header__menu {
+    font-family: Montserrat, sans-serif;
+}
+
+.menu__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header__menu ul li:first-child {
+    background-color: rgb(242, 30, 18);;
+}
+
+.header__menu ul li:first-child>a {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.header__menu ul li:last-child {
+    margin-right: 45px;
+}
+
+.menu__item{
+    padding:32px 24px;
+    list-style-type: none;
+}
+
+.header__menu .menu__item>a {
+    list-style-type: none;
+    letter-spacing: -0.1px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.menu__item:hover {
+    background-color: rgb(242, 30, 18);;
+    a {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    transition: 0.5s ease-out;
+}
+
+/*-----------Main|Me-------------*/
+.aboutMe{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.aboutMe__photo {
+    background-image: url(../img/me.jpg);
+    height: 725px;
+    width: 617px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+}
+
+.aboutMe__text {
+    width: 814px;
+    height: 814px;
+    padding: 176px 45px 320px 40px;
+    background-color: rgb(20, 20, 22);
+}
+
+.aboutMe__text>h1 {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 88px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.aboutMe__text>p {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+/*-----------Main|WorkExperience-------------*/
+.workExp {
+    width: 1440px;
+    margin: 120px auto 105px auto;
+    padding: 0 72px;
+}
+
+.workExp__subtitle {
+    color: rgb(132, 145, 160);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom:0px;
+    
+}
+
+.workExp__title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: -1.8px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.workExp_container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 0 0;
+}
+
+.workExp_item {
+    text-align: left;
+    width: 33.3333%;
+}
+
+.workExp_item_numb {
+    color: rgb(132, 145, 160);
+    font-family: Montserrat;
+    font-size: 117px;
+    font-weight: 400;
+    line-height: 143px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0;
+}
+
+.workExp_item_title {
+    color: white;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 0;
+}
+
+.workExp_item_content {
+    color: rgb(132, 145, 160);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.workExp_item:hover {
+    background-color:white;
+    h3 {
+        color:black;
+    }
+    transition: 0.5s ease-out;
+}
+
+/*-----------Main|Vision-------------*/
+.vision {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.vision__text {
+    width: 50.5%;
+    height: 600px;
+    background-color: rgb(20, 20, 22);
+    padding: 70px 72px;
+}
+
+.vision__title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.vision__content {
+    color: rgb(105, 116, 128);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 135px;
+}
+
+.vision__text>a {
+    text-decoration: none;
+    color: rgb(196, 196, 196);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-bottom: 5px;
+    border-bottom: .5px solid;
+}
+
+.vision__text>a:hover {
+    color:white;
+    padding-bottom: 7px;
+    text-shadow: rgb(196, 196, 196);
+    transition: 0.1s ease-out;
+}
+
+.vision__photo {
+    width: 49.5%;
+    background-image: url(../img/MainPage/redNeon.jpg);
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+}
+
+/*-----------Main|Skillset-------------*/
+
+
+/*-----------Main|LifeSides-------------*/
+
+
+/*-----------Main|Promo-------------*/
+
+
+/*-----------Footer-------------*/
+footer {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0px 99px 5px 99px;
+}
+
+hr {
+    opacity: 10%;
+    margin-bottom: 24px;
+}
+
+.footer__top{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo{
+    margin:0px 20px;
+    
+}
+.footer__logo>img {
+    width: 180px;
+    height: auto;
+}
+
+.footer__menu {
+    font-family: Montserrat, sans-serif;
+}
+
+.fmenu__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.fmenu__item {
+    padding: 29px 24px;
+    list-style-type: none;
+}
+
+.footer__menu .fmenu__item>a {
+    list-style-type: none;
+    letter-spacing: -0.1px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.fmenu__item:hover {
+    color: rgb(242, 30, 18);;
+    a {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    transition: 0.5s ease-out;
+}
+
+.footer__info {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+    color: rgb(153, 153, 153);
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0 20px;
+}
+.icon_list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.icons__item {
+    padding: 0 12px;
+    list-style-type: none;
+}
+
+.icons__item>i{
+    font-size: 1.5rem;
+    color: rgb(83, 83, 83);
+}
+
+.icons__item>i:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
