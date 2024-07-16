@@ -4,10 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../fontawesome/fontawesome-free-6.5.2-web/css/all.css">
     <link rel="stylesheet" href="../../../../modern-normalize-main/modern-normalize.css">
-    <link rel="stylesheet" href="aboutPage.css">
+    <link rel="stylesheet" href="../styles/aboutPage.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
     <title>Персональная страница Костина А.К.</title>
 </head>
+<body>
+    <header>
+        <div class="header__logo">
+            <h1 class="header__logoText">&#x3C;/DevFrye&#x3E;</h1>
+        </div>
+        <nav class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="mainPage.html">Главная</a></li>
+                <li class="menu__item"><a href="aboutPage.html">Мои интересы</a></li>
+                <li class="menu__item"><a href="contactsPage.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="aboutInterests">
+            <div class="aboutInterests__text">
+                <h1>This page is about<br><span style="color:rgba(255, 255, 255, 0.5)">my interests.</span></h1>
+                <p>I'm probably the most passionate designer you will ever get to work with. If you<br>have a great project that needs some amazing skills, I'm your guy.</p>
+            </div>
+            <div class="aboutInterests__photo"></div>
+        </div>
+        <div class="gameDev">
+            <div class="gameDev__titles">
+                <h3 class="gameDev__pretitle">gamedev</h3>
+                <h2 class="gameDev__title">Быть услышанным</h2>
+            </div>
+            <div class="gameDev__cards">
+                <div class="gameDev__card">
+                    <div class="card_mainInfo">
+                        <img src="../img/AboutPage/grisPreview.jpg" alt="Gris Game">
+                        <div class="card__header">
+                            <h3>Gris</h3>
+                            <p>2018</p>
+                        </div>
+                        <p>Грис — наивная девочка, запершаяся в собственном мире<br>из-за боли, окутавшей ее в реальности.</p>
+                    </div>
+                    <div class="card__footer">
+                        <button onclick="window.location.href='#gris';">Читать рецензию <i class="fa-solid fa-angles-right"></i></button>
+                        <div>10/10</div>
+                    </div>
+                </div>
+                <div class="gameDev__card">
+                    <div class="card_mainInfo">
+                        <img src="../img/AboutPage/strayPreview.jpg" alt="Gris Game">
+                        <div class="card__header">
+                            <h3>Stray</h3>
+                            <p>2022</p>
+                        </div>
+                        <p>Потерявшемуся, одинокому, оторванному от семьи<br>бродячему коту предстоит разгадать древнюю тайну,<br>вырваться из давно заброшенного кибергорода и найти<br>дорогу домой.</p>
+                    </div>
+                    <div class="card__footer">
+                        <button onclick="window.location.href='#stray';">Читать рецензию <i class="fa-solid fa-angles-right"></i></button>
+                        <div>10/10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gameRev">
+            <div class="gameRev__card">
+                <div class="gameRev__pict" id="gris">GRIS</div>
+            </div>
+            <div class="gameRev__text">
+                
+            </div>
+            <div class="gameRev__card">
+                <div class="gameRev__pict" id="stray">STRAY</div>
+            </div>
+            <div class="gameRev__text">
+                
+            </div>
+        </div>
+        <div class="creativeSide">
+            <div class="creativeSide__text">
+                <h3 class="gameDev__pretitle">web & graphics design</h3>
+                <h2 class="gameDev__title">Креативная сторона</h2>
+            </div>
+            <div class="creativeSide__table">
+                <table class="creativeSide__tableT">
+                    <thead>
+                        <tr>
+                            <th>Тип</th>
+                            <th>Примеры Работ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="tableCategory">Веб-Дизайн</td>
+                        </tr>
+                        <tr>
+                            <td class="tableProject">
+                                <p>Веб-сайт для<br>Хакатона &#x3C;/beCoder&#x3E;</p>
+                                <p>Hackathon &#x3C;/beCoder&#x3E; – это шанс для<br>молодых специалистов в<br>соревновательном режиме получить<br>новый заряд мотивации для<br>дальнейшего развития в IT и<br>возможность пройти собеседование в<br>компанию</p>
+                            </td>
+                            <td class="tablePictures">
+                                <img src="../img/AboutPage/Hackathon.png" alt="Hackathon </beCoder>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableProject">
+                                <p>Веб-сайт для<br>Научной Конференции<br>SPbPU Talks</p>
+                                <p>SPbPU Talks — общегородская<br>конференция в стиле TED в стенах<br>Политехнического университета Петра<br>Великого.</p>
+                            </td>
+                            <td class="tablePictures">
+                                <img src="../img/AboutPage/SPbPUTalks.png" alt="SPbPU Talks">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="tableCategory">Графический Дизайн</td>
+                        </tr>
+                        <tr>
+                            <td class="tableProject">
+                                <p>Графический дизайн для<br>межроссийского<br>мероприятия rJBT</p>
+                                <p>rJBT'23 -<br>это молодёжное тренинговое<br>мероприятие, целью которого<br>является обучение и сплочение нового<br>управляющего состава<br>BEST групп из России, а также обмен<br>опытом с прошлыми<br>членами менеджмента. На съезде<br>проводятся тренинги от<br>сертифицированных специалистов.<br>Помимо менеджмента и<br>тренеров в мероприятии также<br>принимают участие самые<br>активные члены сообщества.<br><br>Среди материалов представлены:<br>
+                                    <ul>
+                                        <li>логотип мероприятия</li>
+                                        <li>шапка мероприятия</li>
+                                        <li>стикерпак мероприятия</li>
+                                    </ul>
+                                </p>
+                            </td>
+                            <td class="tablePictures3">
+                                <img src="../img/AboutPage/rJBT_logo.png" alt="rJBT">
+                                <img src="../img/AboutPage/rJBT_head.png" alt="rJBT">
+                                <img src="../img/AboutPage/rJBT_stickers.png" alt="rJBT">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__top">
+            <div class="footer__logo">
+                <img src="../img/logo.png" alt="Логотип">
+            </div>
+            <nav class="footer__menu">
+                <ul class="fmenu__list">
+                    <li class="fmenu__item"><a href="#">Написать мне</a></li>
+                    <li class="fmenu__item"><a href="#">Сообщество</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <div class="footer__info">
+            <div class="footer__copyright">&#xA9; 2024 All Rights Reserved.</div>
+            <div class="footer__socials">
+                <ul class="icon_list">
+                    <li class="icons__item"><i class="fa-brands fa-steam"></i></i></li>
+                    <li class="icons__item"><i class="fa-brands fa-vk"></i></li>
+                    <li class="icons__item"><i class="fa-brands fa-telegram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
