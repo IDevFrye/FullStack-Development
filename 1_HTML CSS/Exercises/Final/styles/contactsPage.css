@@ -102,8 +102,192 @@ header {
     transition: 0.5s ease-out;
 }
 
-/*-----------Main|-------------*/
+/*-----------Main/ContactForm-------------*/
+.contactMe {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 55px 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.contactMe__photo {
+    background-image: url(../img/me.jpg);
+    height: 725px;
+    width: 43%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    
+}
+
+.contact-form-container {
+    /* background-color: #1c1c1c; */
+    padding: 25px 76px;
+    width: 57%;
+    height: 800px;
+}
+
+.contactMe__subtitle {
+    color: rgb(132, 145, 160);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.contactMe__title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top:0;
+    margin-bottom: 30px;
+}
+
+.contactMe__form {
+    width: 603px;
+    height: 584px;
+    border-radius: 23px;
+    background-color: #1c1c1c69;
+    padding: 38px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(24, 24, 35);
+    color: #fff;
+    
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    max-width: 525px;
+    min-width: 525px;
+}
+
+textarea {
+    min-height: 178px;
+    max-height: 178px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.21);
+}
+
+.demoToggleCheckbox {
+    display: none;
+    
+}
+
+.demoToggleCheckbox+label {
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 17px;
+    position: relative;
+    cursor: pointer;
+}
+
+.demoToggleCheckbox+label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.demoToggleCheckbox:checked+label {
+    background-color: rgb(242, 30, 18);
+}
+
+.demoToggleCheckbox:checked+label:after {
+    transform: translateX(26px);
+}
+
+.switch {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+.switchLabel {
+    margin: 0;
+}
+
+.flex__check {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 14px;
+    border: none;
+    background-color: rgb(100, 10, 5);
+    cursor: pointer;
+    padding: 18px 170px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #b71c1c;
+}
+
+/*-----------Main/-------------*/
 
 /*-----------Footer-------------*/
 footer {

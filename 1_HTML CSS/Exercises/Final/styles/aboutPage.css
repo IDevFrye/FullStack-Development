@@ -290,11 +290,13 @@ header {
     background-color: white;
     color: black;
     font-weight: 700;
+    transition: .5s ease-out;
 }
 
 .card__footer>div:hover {
     background-color: rgb(242, 30, 18);
     color: white;
+    transition: .5s ease-out;
 }
 
 /*-----------Main|gameDev-------------*/
@@ -320,7 +322,71 @@ header {
     letter-spacing: 43px;
     text-align: center;
     text-transform: capitalize;
-    padding: 109px 484px;
+    padding: 23px 405px;
+}
+
+.gameRev__pict {
+    text-align: center;
+    width: 65%;
+    height: 250px;
+    margin: auto;
+    user-select: none;
+}
+
+.gameRev__pict p {
+    font: 400 110px Montserrat, sans-serif;
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #099eda, 0 0 0.5em #099eda, 0 0 0.1em #099eda, 0 5px 3px #5c9ad3;
+}
+
+.gameRev__pict p span {
+    animation: blink linear infinite 2s;
+}
+
+.gameRev__pict p span:nth-of-type(2) {
+    animation: blink linear infinite 3s;
+}
+
+@keyframes blink {
+    78% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    79% {
+        color: #333;
+        text-shadow: none;
+    }
+
+    80% {
+        color: #333;
+        text-shadow: none;
+    }
+
+    81% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    82% {
+        color: #333;
+        text-shadow: none;
+    }
+
+    83% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+
+    92% {
+        color: #333;
+        text-shadow: none;
+    }
+
+    92.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
 }
 
 .gameRev__text {
@@ -329,9 +395,70 @@ header {
     
 }
 
-iframe {
-    width: 100%;
-    height: 400px;
+.gameRev__head {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.gameRev__head:hover {
+    text-shadow: 0 -10px 40px, 0 0 2px, 0 0 0.5em #099eda, 0 0 0.5em #099eda, 0 0 0.1em #099eda, 0 5px 3px #5c9ad3;
+    transition: .5s ease-out;
+}
+
+.rev__div {
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.rev_H {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 0;
+}
+
+.rev__p {
+    color: rgb(167, 174, 182);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+blockquote {
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 12px;
+    width: 580px;
+    padding: 20px;
+    font-style: italic;
+}
+
+blockquote>p {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.gameRev__text {
+    border-radius: 43px;
 }
 
 .gameRev>div:nth-child(3) {
@@ -350,7 +477,104 @@ iframe {
     letter-spacing: 43px;
     text-align: center;
     text-transform: capitalize;
-    padding: 110px 408px;
+    padding: 19px 316px;
+    margin-top: 200px;
+}
+
+.rev_img {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.rev_pict1 {
+    background-image: url(../img/AboutPage/gris1.png);
+    width: 60%;
+    height: 472px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.rev_pict2 {
+    background-image: url(../img/AboutPage/gris2.png);
+    width: 60%;
+    height: 472px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.rev_pict3 {
+    background-image: url(../img/AboutPage/stray1.png);
+    width: 60%;
+    height: 472px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.rev_pict4 {
+    background-image: url(../img/AboutPage/stray2.png);
+    width: 60%;
+    height: 472px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.rev_pict5 {
+    background-image: url(../img/AboutPage/stray.png);
+    width: 60%;
+    height: 472px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.rev_desc {
+    width: 35%;
+    
+}
+
+.rev_desc>p {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    /* margin: 210px 60px 0 60px; */
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(126, 126, 126);
+    padding: 20px;
+}
+
+.rev_img:hover {
+    p {
+        /* background-color: rgb(88, 8, 4); */
+        box-shadow: 0px 4px 53px 0px #5c99d39f;
+        transition: 1s ease-out;
+    }
+    div.rev_pict5, div.rev_pict4, div.rev_pict3, div.rev_pict2, div.rev_pict1 {
+        box-shadow: 0px 4px 53px 0px #5c99d35b;
+        background-position: 90% 10%;
+        transition: 1s ease-out;
+    }
 }
 
 /*-----------Main|creativeSide-------------*/
@@ -455,6 +679,17 @@ iframe {
     display:flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+}
+
+.tableProject:hover {
+    p {
+        font-weight: bolder;
+        transition: 1s ease-out;
+    }
+    li {
+        font-weight: bolder;
+        transition: 1s ease-out;
+    }
 }
 
 /*-----------Footer-------------*/
