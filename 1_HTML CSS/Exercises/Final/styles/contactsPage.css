@@ -17,9 +17,9 @@ body {
 
 /*-----------Header-------------*/
 header {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -27,7 +27,7 @@ header {
 }
 
 .header__logo {
-    padding: 0px 99px 5px 99px;
+    padding: 0;
 }
 
 .header__logoText {
@@ -49,7 +49,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -68,11 +68,11 @@ header {
 }
 
 .header__menu ul li:last-child {
-    margin-right: 45px;
+    margin-right: 0;
 }
 
 .menu__item {
-    padding: 32px 24px;
+        padding: 30px 17px;
     list-style-type: none;
 }
 
@@ -104,9 +104,9 @@ header {
 
 /*-----------Main/ContactForm-------------*/
 .contactMe {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 55px 0;
+    padding: 20px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -115,20 +115,18 @@ header {
 
 .contactMe__photo {
     background-image: url(../img/me.jpg);
-    height: 725px;
-    width: 43%;
+    height: 300px;
+    width: 100%;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-color: lightgray;
-    
+    margin-bottom: 20px;
 }
 
 .contact-form-container {
-    /* background-color: #1c1c1c; */
-    padding: 25px 76px;
-    width: 57%;
-    height: 800px;
+    padding: 25px 20px;
+    width: 100%;
 }
 
 .contactMe__subtitle {
@@ -147,21 +145,20 @@ header {
 .contactMe__title {
     color: rgb(255, 255, 255);
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 67px;
+    line-height: 40px;
     letter-spacing: 0%;
     text-align: left;
-    margin-top:0;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .contactMe__form {
-    width: 603px;
-    height: 584px;
+    width: 100%;
     border-radius: 23px;
     background-color: #1c1c1c69;
-    padding: 38px;
+    padding: 20px;
 }
 
 label {
@@ -186,15 +183,13 @@ textarea {
     border-radius: 8px;
     background-color: rgb(24, 24, 35);
     color: #fff;
-    
+
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0%;
     text-align: left;
-    max-width: 525px;
-    min-width: 525px;
 }
 
 textarea {
@@ -209,7 +204,7 @@ textarea::placeholder {
 
 .demoToggleCheckbox {
     display: none;
-    
+
 }
 
 .demoToggleCheckbox+label {
@@ -253,6 +248,7 @@ textarea::placeholder {
     text-align: left;
     text-transform: uppercase;
 }
+
 .switchLabel {
     margin: 0;
 }
@@ -277,7 +273,7 @@ button {
     border: none;
     background-color: rgb(100, 10, 5);
     cursor: pointer;
-    padding: 18px 170px;
+    padding: 18px 60px;
     margin-bottom: 20px;
     margin-top: 10px;
     transition: background-color 0.3s;
@@ -291,9 +287,9 @@ button:hover {
 
 /*-----------Footer-------------*/
 footer {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0px 99px 25px 99px;
+    padding: 0px 20px 25px 20px;
 }
 
 hr {
@@ -331,7 +327,7 @@ hr {
 }
 
 .fmenu__item {
-    padding: 29px 24px;
+    padding: 15px 10px;
     list-style-type: none;
 }
 
@@ -352,7 +348,6 @@ hr {
 
 .fmenu__item:hover {
     color: rgb(242, 30, 18);
-    ;
 
     a {
         font-size: 16px;
@@ -393,11 +388,86 @@ hr {
     list-style-type: none;
 }
 
-.icons__item>i {
+.icons__item>a>i {
     font-size: 1.5rem;
     color: rgb(83, 83, 83);
 }
 
-.icons__item>i:hover {
+.icons__item>a>i:hover {
     color: rgb(255, 255, 255);
+}
+@media (min-width: 360px) {
+    .demoToggleCheckbox:checked+label:after {
+        transform: translateX(20px);
+    }
+    .demoToggleCheckbox+label {
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+        background-color: #ccc;
+        border-radius: 17px;
+        position: relative;
+        cursor: pointer;
+    }
+
+
+    .switch {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .contactMe {
+        padding: 0px 0 30px 0;
+    }
+
+    .contactMe__photo {
+        height: 725px;
+        width: 43%;
+        margin-bottom: 0;
+    }
+
+    .contact-form-container {
+        padding: 25px 76px;
+        width: 57%;
+    }
+
+    .contactMe__title {
+        font-size: 55px;
+        line-height: 67px;
+    }
+
+    .contactMe__form {
+        width: 603px;
+        height: 584px;
+        padding: 38px;
+    }
+
+    input,
+    textarea {
+        max-width: 525px;
+    }
+
+    button {
+        padding: 18px 170px;
+    }
+
+    .demoToggleCheckbox:checked+label:after {
+        transform: translateX(20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        width: 1440px;
+    }
+
+    .contactMe {
+        width: 1440px;
+    }
+
+    footer {
+        width: 1440px;
+        padding: 0px 99px 25px 99px;
+    }
 }

@@ -17,17 +17,17 @@ body {
 
 /*-----------Header-------------*/
 header {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__logo{
-    padding: 0px 99px 5px 99px;
+.header__logo {
+    padding: 0;
 }
 
 .header__logoText {
@@ -49,7 +49,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -68,11 +68,11 @@ header {
 }
 
 .header__menu ul li:last-child {
-    margin-right: 45px;
+    margin-right: 0;
 }
 
-.menu__item{
-    padding:32px 24px;
+.menu__item {
+    padding: 30px 17px;
     list-style-type: none;
 }
 
@@ -88,15 +88,17 @@ header {
     text-align: left;
     text-decoration: none;
     cursor: pointer;
-    
+
 }
 
 .menu__item:hover {
     background-color: rgb(242, 30, 18);
+
     a {
         font-size: 16px;
         font-weight: 700;
     }
+
     transition: 0.5s ease-out;
 }
 
@@ -514,6 +516,15 @@ header {
     letter-spacing: 0%;
     text-align: center;
 }
+.life__back>ul {
+    color: rgb(132, 145, 160);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+}
 
 .life__back>p {
     color: rgb(132, 145, 160);
@@ -570,9 +581,9 @@ header {
 
 /*-----------Footer-------------*/
 footer {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0px 99px 25px 99px;
+    padding: 0px 20px 25px 20px;
 }
 
 hr {
@@ -580,17 +591,18 @@ hr {
     margin-bottom: 24px;
 }
 
-.footer__top{
+.footer__top {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-.footer__logo{
-    margin:0px 20px;
-    
+.footer__logo {
+    margin: 0px 20px;
+
 }
+
 .footer__logo>img {
     width: 180px;
     height: auto;
@@ -609,7 +621,7 @@ hr {
 }
 
 .fmenu__item {
-    padding: 29px 24px;
+    padding: 15px 10px;
     list-style-type: none;
 }
 
@@ -629,11 +641,13 @@ hr {
 }
 
 .fmenu__item:hover {
-    color: rgb(242, 30, 18);;
+    color: rgb(242, 30, 18);
+
     a {
         font-size: 16px;
         font-weight: 700;
     }
+
     transition: 0.5s ease-out;
 }
 
@@ -654,6 +668,7 @@ hr {
     text-align: left;
     margin: 0 20px;
 }
+
 .icon_list {
     display: flex;
     flex-flow: row wrap;
@@ -667,16 +682,147 @@ hr {
     list-style-type: none;
 }
 
-.icons__item>i{
+.icons__item>a>i {
     font-size: 1.5rem;
     color: rgb(83, 83, 83);
 }
 
-.icons__item>i:hover {
+.icons__item>a>i:hover {
     color: rgb(255, 255, 255);
 }
 
 
+@media (min-width: 360px) {
+    .aboutMe {
+            padding: 55px 0;
+            flex-flow: column;
+            width: 768px;
+            align-content: center;
+    }
+    
+    .aboutMe__photo {
+        height: 725px;
+        width: 768px;
+        margin-bottom: 0;
+    }
+    .workExp_container {
+        flex-flow: column;
+        width: 768px;
+        align-content: center;
+    }
+    .vision {
+        flex-flow: column;
+        width: 768px;
+        align-content: center;
+    }
+    .skillset {
+        flex-flow: column;
+        width: 768px;
+        align-content: center;
+    }
+    .life__items {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        width: 700px;
+        align-items: left;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px) {
+    .aboutMe {
+        padding: 0px 0;
+        flex-flow: column;
+        width: 768px;
+        align-content: center;
+    }
+
+    .aboutMe__photo {
+        height: 725px;
+        width: 768px;
+        margin-bottom: 0;
+    }
+
+
+    .aboutMe__title {
+        font-size: 55px;
+        line-height: 67px;
+    }
+
+    .workExp_container {
+        flex-flow: column;
+        width: 768px;
+        align-content: center;
+    }
+
+    .vision {
+        flex-flow: column;
+        width: 1000px;
+        align-content: center;
+    }
+    .skillset {
+        flex-flow: column;
+        width: 1000px;
+        align-content: center;
+    }
+    .life__items {
+        display: flex;
+        flex-flow: column;
+        gap:10px;
+        width: 700px;
+        align-items: left;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        width: 1440px;
+    }
+
+    .aboutMe {
+        width: 1440px;
+        flex-flow: row wrap;
+    }
+
+    .aboutMe__photo {
+        height: 725px;
+        width: 598px;
+        margin-bottom: 0;
+    }
+    .workExp_container {
+        flex-flow: row;
+        width: 1440px;
+        justify-content: space-between;
+        /* align-content: center; */
+    }
+
+    .vision {
+        flex-flow: row;
+        width: 1440px;
+        justify-content: space-between;
+    }
+
+    .skillset {
+        flex-flow: row;
+        width: 1440px;
+        justify-content: space-between;
+    }
+
+    .life__items {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 1240px;
+        justify-content: space-between;
+    }
+
+    footer {
+        width: 1440px;
+        padding: 0px 99px 25px 99px;
+    }
+}
 
 
 
