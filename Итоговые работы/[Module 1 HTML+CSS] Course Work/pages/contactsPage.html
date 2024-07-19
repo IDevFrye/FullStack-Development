@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+        integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles/contactsPage.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/86d1196dac.js" crossorigin="anonymous"></script>
+    <title>Персональная страница Костина А.К.</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            <h1 class="header__logoText">&#x3C;/DevFrye&#x3E;</h1>
+        </div>
+        <nav class="header__menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="mainPage.html">Главная</a></li>
+                <li class="menu__item"><a href="aboutPage.html">Мои интересы</a></li>
+                <li class="menu__item"><a href="contactsPage.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contactMe">
+            <div class="contactMe__photo"></div>        
+            <div class="contact-form-container">
+                <h3 class="contactMe__subtitle">Контакты</h3>
+                <h2 class="contactMe__title">Свяжитесь со мной!</h2>
+                <form class="contactMe__form" action="https://testform.stanislavsivin.ru" method="POST">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" placeholder="Андрей Костин">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="andrey.kostin.111@mail.ru">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" name="message" placeholder="Напишите сообщение..."></textarea>
+                    <div class="flex__check">
+                        <span class="switch">Хочу отправить анонимное сообщение</span>
+                        <input class="demoToggleCheckbox" type="checkbox" id="anonymous" name="anonymous">
+                        <label class="switchLabel" for="anonymous"></label>
+                    </div>
+                    <button type="submit">Отправить запрос</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__top">
+            <div class="footer__logo">
+                <img src="../img/logo.png" alt="Логотип">
+            </div>
+            <nav class="footer__menu">
+                <ul class="fmenu__list">
+                    <li class="fmenu__item"><a href="contactsPage.html">Написать мне</a></li>
+                    <li class="fmenu__item"><a href="#">Сообщество</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <div class="footer__info">
+            <div class="footer__copyright">&#xA9; 2024 All Rights Reserved.</div>
+            <div class="footer__socials">
+                <ul class="icon_list">
+                    <li class="icons__item"><a target="_blank" href="https://steamcommunity.com/id/jcb_it/"><i
+                                class="fa-brands fa-steam"></i></a></li>
+                    <li class="icons__item"><a target="_blank" href="https://vk.com/andrey_iters"><i class="fa-brands fa-vk"></i></a></li>
+                    <li class="icons__item"><a target="_blank" href="https://t.me/dev_frye"><i class="fa-brands fa-telegram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
