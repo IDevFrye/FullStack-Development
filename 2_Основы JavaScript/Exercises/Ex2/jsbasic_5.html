@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2.5 Ветвление и циклы</title>
+    <script>
+        let i = 0, j = 0;
+        let beforeArr = [], afterArr = [];
+        let counter = 0;
+        do {
+            beforeArr.push(++i); // Префиксный инкремент: сначала увеличивает i, потом добавляет в массив
+            afterArr.push(j++); // Постфиксный инкремент: сначала добавляет j в массив, потом увеличивает j
+            counter++;
+        } while (counter < 5);
+        /*
+        beforeArr: [1, 2, 3, 4, 5]
+        afterArr: [0, 1, 2, 3, 4]
+        Все значения элементов в массиве beforeArr будут с i+1 до i+5
+        Все значения элементов в массиве beforeArr будут с j до j+4
+        */
+        console.log(beforeArr);
+        console.log(afterArr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

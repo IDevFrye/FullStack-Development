@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2.4 Ветвление и циклы</title>
+    <script>
+        let arrOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let tmp = prompt("На какое число умножим элементы массива?");
+        let numberTmp = parseInt(tmp, 10);
+        let el = 0;
+        while (el < arrOfNumbers.length) {
+            arrOfNumbers[el] *= numberTmp;
+            el++;
+        }
+        console.log(numberTmp);
+        console.log(arrOfNumbers);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
