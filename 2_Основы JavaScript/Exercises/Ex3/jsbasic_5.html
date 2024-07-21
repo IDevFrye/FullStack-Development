@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Задание 3.5. Стрелочные функции </title>
+    <script>
+        const ask = (question, yes, no) => {
+            if (confirm(question)) yes();
+            else no();
+        };
+
+        ask(
+            "Вы согласны?",
+            () => alert("Вы согласились."),
+            () => alert("Вы отменили выполнение.")
+        );
+    </script>
+<body>
+</body>
+</html>

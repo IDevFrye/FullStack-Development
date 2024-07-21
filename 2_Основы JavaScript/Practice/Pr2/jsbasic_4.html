@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Задание 3.4. Возвращаемое значение функции </title>
+    <script>
+        function Logon() {
+            let userID = prompt('Введите логин', ' ');
+            let password = prompt('Введите пароль', ' ');
+            let valid = ValidateLogon(userID, password);
+            if (valid == true) {
+                alert('Правильный пароль');
+            } else {
+                alert('Не правильный пароль');
+            }
+        }
+        function ValidateLogon(id, pwd) {
+            let ReturnValue;
+            if (id == 'ИвановИван' && pwd == 'пароль') {
+                ReturnValue = true;
+            } else {
+                ReturnValue = false;
+            }
+            return ReturnValue;
+        }
+        Logon();
+    </script>
+<body>
+</body>
+</html>
