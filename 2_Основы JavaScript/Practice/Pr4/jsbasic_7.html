@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <title> Задание 4.7. Сортировка массива </title>
+    <meta charset="UTF-8">
+    <title> Задание 5.7 Смещение окна по оси X и Y </title>
+    <script>
+        {
+            "use strict";
+
+            let newWindow;
+            function openWindow() {
+                newWindow = window.open('', '', 'height=200,width=300');
+            }
+            function moveByX() {
+                newWindow.moveBy(10, 0)
+            }
+
+            function moveByY() {
+                newWindow.moveBy(0, 10)
+            }
+        }
+    </script>
 </head>
 <body>
-    <script>
-        var prоducts = new Array();
-        prоducts[0]= 3; 
-        prоducts[1]= 'Квас'; 
-        prоducts[2]= '1'; 
-        prоducts[3]= 'Икра';
-        prоducts.sort(); 
-        for (var i=0; i < prоducts.length; i++) { 
-            document.write(prоducts[i] + '<br>'); 
-        } 
-    </script>
+    <input type="button" value="Открыть" onclick="openWindow()" />
+    <br /><br />
+    <input type="button" value="Смещение по оси X" onclick="moveByX()" />
+    <br /><br />
+    <input type="button" value="Смещение по оси Y" onclick="moveByY()" />
 </body>
 </html>

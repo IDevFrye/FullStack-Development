@@ -2,45 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 4.12. Вывод свойств и значений объекта</title>
-</head>
-<body>
+    <title>Задание 5.12 Применение некоторых методов объекта Date</title>
     <script>
-        let city1 = {
-            name: "ГородN",
-            population: 10000000,
-            getName: function () {
-                return this.name;
-            },
-            exportStr : function () {
-                let result = "";
-                for (key in this) {
-                    if (typeof this[key] !== 'function') {
-                        result += `${key}=${this[key]}\n`;
-                    }
-                }
-                return result;
+        sDate = () => {
+            let time_now = new Date()
+            let hours_now = time_now.getHours()
+            console.log(hours_now);
+            let minutes_now = time_now.getMinutes()
+            let message = "Сейчас "
+            let hours_text
+            if (minutes_now <= 30) {
+                message += minutes_now + " минут "
+                hours_text = hours_now + 1
             }
-        };
-        let city2 = {
-            name: "СПб",
-            population: 90000000,
-            getName: function () {
-                return this.name;
-            },
-            exportStr: function () {
-                let result = "";
-                for (key in this) {
-                    if (!(this[key].constructor.toString().indexOf("Function")>-1)) {
-                        result += `${key}=${this[key]}\n`;
-                    }
-                }
-                return result;
+            else {
+                message += "без " + (60 - minutes_now) + " минут "
+                hours_text = hours_now + 1
             }
-        };
-        console.log(city1.exportStr());
-        console.log(city2.exportStr());
+            if (hours_now == 0 && minutes_now <= 30) {
+                message += "после полуночи."
+            }
+            else if (hours_now == 11 && minutes_now > 30) {
+                message += "полдень"
+            }
+            else if (hours_now < 12) {
+                message += hours_text + " до обеда."
+            }
+            else if (hours_now == 12 && minutes_now <= 30) {
+                message += "после полудня."
+            }
+            else if (hours_now < 18) {
+                message += parseInt(hours_text - 12) + " пополудни."
+            }
+            else if (hours_now == 23 && minutes_now > 30) {
+                message += " полночь."
+            }
+            else {
+                message += parseInt(hours_text - 12) + " вечера."
+            }
+            document.querySelector('#Date').innerHTML = message;
+        }
     </script>
+</head>
+<body onLoad="sDate()">
+    <p>Текущая дата - <b id='Date'></b></p>
 </body>
 </html>

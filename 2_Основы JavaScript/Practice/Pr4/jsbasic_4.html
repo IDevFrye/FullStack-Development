@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <title> Задание 4.4. Отображение всех элементов массива, кроме не
-        определенного </title>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Задание 5.4. Свойства объекта window.screen</title>
     <script>
-        let prоducts = [];
-        prоducts[0] = 'Блины ';
-        prоducts[1] = 'Квас';
-        prоducts[3] = 'Пельмени';
-        prоducts[4] = 'Икра';
-        for (var i = 0; i < prоducts.length; i++) {
-            if (prоducts[i] != undefined) {
-                document.write(prоducts[i] + '<br>');
-            }
+        {
+            "use strict";
+            document.write("<b>Максимальная ширина равна " + window.screen.width + "пикселей.</b > <br>");
+            document.write("<b> Доступная ширина равна " + window.screen.availWidth +" пикселей.</b><br>");
+            document.write("<p>");
+            document.write("<b>Максимальная высота равна " + window.screen.height + "пикселей.</b><br>");
+            document.write("<b> Доступная высота равна " + window.screen.availHeight +" пикселей.</b><br>");
+            document.write("<p>");
+            document.write("<b>Глубина цвета равна " + window.screen.colorDepth + "битов на пиксель.</b><br>");
         }
     </script>
+</head>
+
+<body>
 </body>
+
 </html>

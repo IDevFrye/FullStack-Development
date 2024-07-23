@@ -1,17 +1,50 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <title> Задание 4.16. Извлечение информации из строки </title>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Задание 5.16. Использование массива для возврата названия дня
+        недели</title>
     <script>
-        function at() {
-            let FirstName = 'Иван';
-            let newString = FirstName.charAt(0);
-            document.getElementById('name').innerHTML = newString
+        sDate = () => {
+            let month_names = new Array(12);
+            month_names[0] = "января";
+            month_names[1] = "февраля";
+            month_names[2] = "марта";
+            month_names[3] = "апреля";
+            month_names[4] = "мая";
+            month_names[5] = "июня";
+            month_names[6] = "июля";
+            month_names[7] = "августа";
+            month_names[8] = "сентября";
+            month_names[9] = "октября";
+            month_names[10] = "ноября";
+            month_names[11] = "декабря";
+            let day_names = new Array(7);
+            day_names[0] = "Воскресенье";
+            day_names[1] = "Понедельник";
+            day_names[2] = "Вторник";
+            day_names[3] = "Среда";
+            day_names[4] = "Четверг";
+            day_names[5] = "Пятница";
+            day_names[6] = "Суббота";
+            let user_year = document.getElementById('year').value,
+                user_month = document.getElementById('month').value,
+                user_day = document.getElementById('day').value,
+                user_date = new Date();
+            user_date.setFullYear(user_year);
+            user_date.setMonth(user_month - 1);
+            user_date.setDate(user_day);
+            let month_name = month_names[user_date.getMonth()];
+            let day_name = day_names[user_date.getDay()];
+            document.getElementById('Date').innerHTML = "Введенная дата:"+user_day +" "+ month_name +", "+ user_year+" <br> "+"Она соответствует дню недели: "+ day_name;
         }
     </script>
-<body onLoad='at()'>
-    <b id='name'></b>
+</head>
+<body>
+    <b id='Date'></b><br>
+    Введите год <input type="text" id='year'><br>
+    Введите месяц (от 1 до 12) <input type="text" id='month'><br>
+    Введите день <input type="text" id='day'><br>
+    <input value="Расчитать" type="button" onClick="sDate();">
 </body>
 </html>

@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <title>Задание 4.15. Объединение строк </title>
+    <meta charset="UTF-8">
+    <title>Задание 5.15. Использование массива для возврата названия дня
+        недели</title>
+    <script>
+        function sDate() {
+            let day_names = new Array(7);
+            day_names[0] = "Воскресенье";
+            day_names[1] = "Понедельник";
+            day_names[2] = "Вторник";
+            day_names[3] = "Среда";
+            day_names[4] = "Четверг";
+            day_names[5] = "Пятница";
+            day_names[6] = "Субота";
+            let date_now = new Date(2001, 7, 23);
+            let day_now = date_now.getDay();
+            date = "getDay() возвращает " + day_now + "; день недели " +
+                day_names[day_now];
+            document.getElementById('Date').innerHTML = date;
+        }
+    </script>
 </head>
-<script>
-    function fullName() {
-        let FirstName = 'Иван';
-        let LastName = 'Иванов';
-        let space = ' ';
-        let newString = FirstName + space + LastName;
-        document.getElementById('name').innerHTML = newString
-    }
-</script>
-<body onLoad=" fullName ()">
-    <p>Добрый день - <b id='name'></b></p>
+<body onLoad="sDate()">
+    <p>Текущая дата - <b id='Date'></b></p>
 </body>
 </html>

@@ -1,4 +1,4 @@
-let city = {
-    name: "ГородN",
-    population: "10 млн",
-};
+function getDate() {
+    return new Date();
+}
+console.log(getDate());

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <title> Задание 4.6. Инвертирование массива </title>
+    <meta charset="UTF-8">
+    <title> Задание 5.6. Ссылка на новый объект Window</title>
+    <script>
+        {
+            "use strict";
+            let newWindow;
+            function openWindow() {
+                newWindow = window.open("https://ya.ru/", "NewWindow");
+                newWindow.focus();
+            }
+        }
+    </script>
 </head>
 <body>
-    <script>
-        let prоducts=[]; 
-        prоducts[0]='Блины'; 
-        prоducts[1]='Квас' ; 
-        prоducts[2]='Пельмени' ; 
-        prоducts[3]='Икра' ;
-        prоducts.reverse(); 
-        for (let i=0; i < prоducts.length; i++) {
-            document.write(prоducts[i] + '<br>' ); 
-        } 
-    </script>
+    <a href="javascript:void(0)" onClick="openWindow()">Отобразить начальную страницу в новом окне</a>
 </body>
 </html>

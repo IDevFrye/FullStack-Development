@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 4.9. Создание объектов</title>
+    <title>Задание 5.9. Определение CSS стилей элемента </title>
+    <script>
+        {
+            "use strict";
+            function styleCurrent() {
+                let divBg = document.getElementsByClassName("myDiv")[0];
+                let divBgcolor;
+
+                if (divBg.style) {
+                    divBgcolor = divBg.style['backgroundColor'];
+                }
+                console.log(divBgcolor);
+            }
+        }
+    </script>
 </head>
 <body>
-    <script>
-        let city = { 
-            name : "ГородN",
-            population : 10000000
-        };
-        console.log(city);
-    </script>
+    <div class="myDiv" style="background-color:red; height:300px; font-family:Arial,Helvetica,sans-serif">jhdafhgf</div>
+    <input type="button" value="Определить стиль" onClick="styleCurrent()" />
 </body>
 </html>

@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title> Задание 4.1. Объекты и их свойства </title>
+    <meta charset="UTF-8">
+    <title>Задание 5.1. Демонстрация метода setTimeout()</title>
     <script>
-        let wоrkbооk = new Object();// Создаем объект. Сохраняем ссылку на него в переменной.
-        wоrkbооk.title = " Основы создания Web-узлов [JavaScript] " // Устанавливаем свойство объекта.
-        wоrkbооk.chapter1 = new Object(); //Создаем объект. Обратите внимание – это вложенный объект.
-        wоrkbооk.chapter1.title = "Введение в JavaScript"; // Устанавливаем свойство объекта.
-        wоrkbооk.chapter1.pages = 11; // Устанавливаем еще одно свойство объекта.
-        wоrkbооk.chapter2 = { title: "Переменные, операторы и выражения", pages: 6 }; //Другой способ установки свойств и значений объекта
-        // Выводим свойства объекта свойств из объекта.
-        document.write("<h2>Курс: " + wоrkbооk.title + "</h2><br>"
-            +
-            "<h3>Тема 1. " + wоrkbооk.chapter1.title + ". Страниц: " + wоrkbооk.chapter1.pages
-            + "</h3>"
-            +
-            "<h3>Тема 2. " + wоrkbооk.chapter2.title + ". Страниц: " + wоrkbооk.chapter2.pages
-            + "</h3>"
-        )
+        {
+            "use strict";
+            clear_status = () => {
+                        alert("Hello, World!");
+            }
+            let timeout_id = window.setTimeout(clear_status, 5000);
+        }
     </script>
 </head>
 <body>

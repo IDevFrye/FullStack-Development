@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title> Задание 4.19. Копирование подстроки </title>
+    <meta charset="UTF-8">
+    <title>Задание 5.19. Функция округления числа до произвольного количества
+        знаков после запятой</title>
+    <script>
+        round_decimals = (original_number, decimals) => {
+            let resultl = original_number * Math.pow(10, decimals);
+            alert(resultl);
+            let result2 = Math.round(resultl);
+            alert(result2);
+        }
+    </script>
 </head>
 <body>
-    <script>
-        let EmailAddress = 'iivanov@yandex.ru ';
-        let NewSubstring = EmailAddress.substring(8, 17);
-        let GuessWebSite = 'www.' + NewSubstring;
-        let Website = prompt('Введите адрес Web-сайта.', GuessWebSite);
-    </script>
+    <input type="button" onClick="round_decimals(2,1.1);" value="Расчитать" />
 </body>
 </html>

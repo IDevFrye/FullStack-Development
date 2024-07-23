@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 4.10. Создание методов у объекта</title>
+    <title> Задание 5.11. Свойства объекта Navigation </title>
+    <script>
+        {
+            "use strict";
+            let property_array = new Array(),
+                Counter = 0;
+            for (let property_name in navigator) {
+                property_array[Counter++] = property_name;
+            }
+            property_array.sort();
+
+            document.write("<table border=\"1\">");
+            document.write("<tr><th>Свойство<\/th><th>Значение<\/th>");
+            for (Counter = 0; Counter < property_array.length; Counter++) {
+                document.write("<tr>");
+                document.write("<td>");
+                document.write(property_array[Counter]);
+                document.write("<\/td>");
+                document.write("<td>");
+                document.write(navigator[property_array[Counter]]);
+                document.write("<\/td>");
+                document.write("<\/tr>");
+            }
+            document.write("<\/table>");
+        }
+    </script>
 </head>
 <body>
-    <script>
-        let city1 = {
-            name: "ГородN",
-            population: 10000000,
-            getName : function () {
-                return this.name;
-            } 
-        };
-        let city2 = {
-            name: "СПб",
-            population: 90000000,
-            getName: function () {
-                return this.name;
-            }
-        };
-        console.log(city1.getName());
-        console.log(city2.getName());
-    </script>
 </body>
 </html>

@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title> Задание 4.3. Отображение всех элементов массива </title>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <title>Задание 5.3. Демонстрация метода setInterval()</title>
     <script>
-        let prоducts = [];
-        prоducts[0] = 'Блины';
-        prоducts[1] = 'Квас';
-        prоducts[3] = 'Пельмени';
-        prоducts[4] = 'Икра';
-        for (let i = 0; i < prоducts.length; i++) {
-            document.write(prоducts[i] + '<br>');
+        {
+            "use strict";
+            let counter = 10;
+            let interval_id = setInterval("countdown()", 1000);
+
+            countdown = () => {
+                document.getElementById('cont').innerHTML = counter--
+                if (counter < 0) {
+                    clearInterval(interval_id);
+                    document.getElementById('cont').style = "display:none";
+                }
+            }
         }
     </script>
+</head>
+<body>
+    <p id='cont'></p>
 </body>
 </html>

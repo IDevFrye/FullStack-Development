@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title> Задание 4.20. Метод substr()</title>
-    <meta charset=”utf-8">
+    <meta charset="UTF-8">
+    <title>Задание 5.20. Примеры случайных чисел, полученных с помощью метода
+        Math.random()</title>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write(Math.random() + "<br>");
+        }
+    </script>
 </head>
 <body>
-    <script>
-        let EmailAddress = prompt('Введите e-mail', ' ');
-        let StartPosition = EmailAddress.indexOf('@') + 1;
-        while (EmailAddress.indexOf('@') === -1) {
-            EmailAddress = prompt('Введите правильный e-mail', ' ');
-            StartPosition = EmailAddress.indexOf('@') + 1;
-        }
-        let NumCharactersToCopy = EmailAddress.length - StartPosition;
-        let NewSubstring = EmailAddress.substr(StartPosition, NumCharactersToCopy);
-        let GuessWebSite = 'www.' + NewSubstring;
-        let Website = prompt('Введите адрес Web-сайта.', GuessWebSite);
-    </script>
 </body>
 </html>

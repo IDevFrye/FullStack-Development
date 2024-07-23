@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title> Метод anchor </title>
+    <meta charset="UTF-8">
+    <title>Задание 5.21. Имитация бросков игральной кости</title>
+    <script>
+        random_number = (lower_bound, upper_bound) => {
+            var initial_random = (upper_bound - lower_bound + 1) * Math.random() +
+                lower_bound
+            return Math.floor(initial_random)
+        }
+        let total1 = 0,
+            total2 = 0,
+            total3 = 0,
+            total4 = 0,
+            total5 = 0,
+            total6 = 0,
+            lower = 1,
+            upper = 6;
+        for (let i = 1; i <= 10000; i++) {
+            this_toss = random_number(lower, upper)
+
+            switch (this_toss) {
+                case 1:
+                    total1++;
+                    break;
+                case 2:
+                    total2++
+                    break;
+                case 3:
+                    total3++;
+                    break;
+                case 4:
+                    total4++;
+                    break;
+                case 5:
+                    total5++;
+                    break;
+                case 6:
+                    total6++;
+            }
+        }
+        document.write("<pre>")
+        document.writeln("Единицы: " + total1)
+        document.writeln("Двойки: " + total2)
+        document.writeln("Тройки: " + total3)
+        document.writeln("Четверки: " + total4)
+        document.writeln("Пятерки: " + total5)
+        document.writeln("Шестерки: " + total6)
+        document.write("</pre>")
+    </script>
 </head>
 <body>
-    <script>
-        let strVariable = "Это - гиперссылка";
-        strVariable = strVariable.link("http://www.yandex.ru");
-        document.write(strVariable);
-    </script>
 </body>
 </html>

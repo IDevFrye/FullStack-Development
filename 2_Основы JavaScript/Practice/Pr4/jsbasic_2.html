@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title> Задание 4.2. Свойство constructor </title>
+    <meta charset="UTF-8">
+    <title>Задание 5.2. Демонстрация метода clearTimeout()</title>
     <script>
-        let wоrkbооk = new Object();// Создаем объект. Сохраняем ссылку на него в переменной.
-        wоrkbооk.title = " Основы создания Web-узлов [JavaScript] " // Устанавливаем свойство объекта.
-        wоrkbооk.chapter1 = new Object(); //Создаем объект. Обратите внимание – это вложенный объект.
-        wоrkbооk.chapter1.title = "Введение в JavaScript"; // Устанавливаем свойство объекта.
-        wоrkbооk.chapter1.pages = 11; // Устанавливаем еще одно свойство объекта.
-        wоrkbооk.chapter2 = { title: "Переменные, операторы и выражения", pages: 6 }; //Другой способ установки свойств и значений объекта
-        // Выводим свойства объекта свойств из объекта.
-        document.write("<h2>Курс: " + wоrkbооk.title + "</h2><br>" + "<h3>Тема 1. " +
-            wоrkbооk.chapter1.title + ". Страниц: " + wоrkbооk.chapter1.pages + "</h3>" + "<h3>Тема 2. "
-            + wоrkbооk.chapter2.title + ". Страниц: " + wоrkbооk.chapter2.pages + "</h3>")
-        if ((typeof workbook == "object") && (workbook.constructor == Date)) {
-            alert('Объект workbook является Датой');
-        }
-        else {
-            alert('Объект workbook не является Датой');
-        }
-        let date = new Date()
-        if ((typeof date == "object") && (date.constructor == Date)) {
-            alert('Объект date является Датой');
-        }
-        else {
-            alert('Объект date не является Датой');
+        {
+            "use strict";
+            let timeout_id = window.setTimeout("hello_status()", 5000);
+            hello_status = () => {
+                alert("Hello, World!");
+            }
+            cancel_status = () => {
+                clearTimeout(timeout_id);
+                alert("Задержка отменена!");
+            }
         }
     </script>
 </head>
-
 <body>
+    <button onclick="cancel_status()">Отмена задержки</button>
 </body>
-
 </html>

@@ -2,7 +2,7 @@
     "use strict";
 
     let prоducts = [];
-    prоducts[0] = 'Блины ';
+    prоducts[0] = 'Блины';
     prоducts[1] = 'Квас';
     prоducts[3] = 'Пельмени';
     prоducts[4] = 'Икра';

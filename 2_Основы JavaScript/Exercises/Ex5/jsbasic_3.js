@@ -1,21 +1,13 @@
 {
-    "use strict";
+"use strict";
+let counter = 10;
 
-    let prоducts = [];
-    prоducts[0] = 'Блины ';
-    prоducts[1] = 'Квас';
-    prоducts[3] = 'Пельмени';
-    prоducts[4] = 'Икра';
-
-    function printProduct(arr) {
-        let tmpArr = [];
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] != undefined) {
-                tmpArr.push(arr[i]);
-            }
-        }
-        return tmpArr.join("/");;
+let countdown = () => {
+    document.getElementById('cont').innerHTML = counter--;
+    if (counter < 0) {
+        clearInterval(interval_id);
     }
-    str = printProduct(prоducts);
-    document.write(str);
+}
+
+let interval_id = setInterval(countdown, 1000); //запустить таймер с интервалом в 1 секунду и передать первым аргументом countdown.
 }

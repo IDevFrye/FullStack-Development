@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 4.14 Клонирование объекта</title>
+    <title>Задание 5.14. Использование функции для возвращения названия
+        месяца</title>
+    <script>
+        month_name = (month_value) => {
+            switch (month_value) {
+                case 0: return "Январь"
+                case 1: return "Февраль"
+                case 2: return "Март"
+                case 3: return "Апрель"
+                case 4: return "Май"
+                case 5: return "Июнь"
+                case 6: return "Июль"
+                case 7: return "Август"
+                case 8: return "Сентябрь"
+                case 9: return "Октябрь"
+                case 10: return "Ноябрь"
+                case 11: return "Декабрь"
+            }
+        }
+        let date_now = new Date(2001, 7, 23)
+        let month_now = date_now.getMonth()
+        document.write("getMonth() возвращает " + month_now + "; месяц " +
+            month_name(month_now))
+    </script>
 </head>
 <body>
-    <script>
-        /*let user = { name: 'John' };
-        let admin = user;
-        admin.name = 'Pete'; // изменено по ссылке из переменной "admin"
-        console.log(user.name); // 'Pete', изменения видны по ссылке из переменной "user"
-        user.name = 'Carl';
-        console.log(admin.name);*/
-
-        let user = {
-            name: "John",
-            age: 30
-        };
-        let clone = {}; // новый пустой объект
-        // скопируем все свойства user в него
-        for (let key in user) {
-            clone[key] = user[key];
-        }
-        // теперь в переменной clone находится абсолютно независимый клон объекта.
-        clone.name = "Pete"; // изменим в нём данные
-        alert(user.name); // в оригинальном объекте значение свойства `name` осталось прежним – John.
-    </script>
 </body>
 </html>
