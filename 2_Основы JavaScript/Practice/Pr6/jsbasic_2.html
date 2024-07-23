@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5.2. Демонстрация метода clearTimeout()</title>
+    <script>
+        {
+            "use strict";
+            let timeout_id = window.setTimeout("hello_status()", 5000);
+            hello_status = () => {
+                alert("Hello, World!");
+            }
+            cancel_status = () => {
+                clearTimeout(timeout_id);
+                alert("Задержка отменена!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="cancel_status()">Отмена задержки</button>
+</body>
+</html>

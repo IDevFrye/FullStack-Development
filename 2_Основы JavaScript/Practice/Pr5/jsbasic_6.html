@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Задание 5.6. Ссылка на новый объект Window</title>
+    <script>
+        {
+            "use strict";
+            let newWindow;
+            function openWindow() {
+                newWindow = window.open("https://ya.ru/", "NewWindow");
+                newWindow.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="javascript:void(0)" onClick="openWindow()">Отобразить начальную страницу в новом окне</a>
+</body>
+</html>

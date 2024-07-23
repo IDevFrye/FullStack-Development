@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5.11 Отображение даты</title>
+    <script>
+        sDate = () => {
+            let my_date = new Date('August 23,2001 3:02:01')
+            let date = new Date()
+            document.querySelector('#myDate').innerHTML = my_date
+            document.querySelector('#Date').innerHTML = date
+        }
+    </script>
+</head>
+<body onLoad="sDate()">
+    <p>Заданная дата - <b id='myDate'></b></p>
+    <p>Текущая дата - <b id='Date'></b></p>
+</body>
+</html>

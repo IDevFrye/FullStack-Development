@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Задание 5.7 Смещение окна по оси X и Y </title>
+    <script>
+        {
+            "use strict";
+
+            let newWindow;
+            function openWindow() {
+                newWindow = window.open('', '', 'height=200,width=300');
+            }
+            function moveByX() {
+                newWindow.moveBy(10, 0)
+            }
+
+            function moveByY() {
+                newWindow.moveBy(0, 10)
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Открыть" onclick="openWindow()" />
+    <br /><br />
+    <input type="button" value="Смещение по оси X" onclick="moveByX()" />
+    <br /><br />
+    <input type="button" value="Смещение по оси Y" onclick="moveByY()" />
+</body>
+</html>
