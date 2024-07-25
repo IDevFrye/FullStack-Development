@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Задание 5.11. Свойства объекта Navigation </title>
+    <title>Метод cloneNode(). Клонирование элементов</title>
     <script>
-        {
-            "use strict";
-            let property_array = new Array(),
-                Counter = 0;
-            for (let property_name in navigator) {
-                property_array[Counter++] = property_name;
-            }
-            property_array.sort();
-
-            document.write("<table border=\"1\">");
-            document.write("<tr><th>Свойство<\/th><th>Значение<\/th>");
-            for (Counter = 0; Counter < property_array.length; Counter++) {
-                document.write("<tr>");
-                document.write("<td>");
-                document.write(property_array[Counter]);
-                document.write("<\/td>");
-                document.write("<td>");
-                document.write(navigator[property_array[Counter]]);
-                document.write("<\/td>");
-                document.write("<\/tr>");
-            }
-            document.write("<\/table>");
+        let index = 1;
+        addItem = (cloneMode) => {
+            let list = document.getElementById("list");
+            let oldItem = list.children[0];
+            let newItem = oldItem.cloneNode(cloneMode);
+            list.appendChild(newItem);
         }
     </script>
 </head>
 <body>
+    <ul id="list">
+        <li>
+            <a href="http://www.yandex.ru/">Пункт 1</a>
+        </li>
+    </ul>
+    <input type="button" onclick="addItem(true);" value="Клонировать все" />
+    <input type="button" onclick="addItem(false);" value="Клонировать только узел" />
 </body>
 </html>

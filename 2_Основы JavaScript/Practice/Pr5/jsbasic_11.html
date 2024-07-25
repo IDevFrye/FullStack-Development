@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.11 Отображение даты</title>
-    <script>
-        sDate = () => {
-            let my_date = new Date('August 23,2001 3:02:01')
-            let date = new Date()
-            document.querySelector('#myDate').innerHTML = my_date
-            document.querySelector('#Date').innerHTML = date
+    <title>Задание 6.11. Метод replaceChild(). Замена элементов</title>
+    <script type="text/javascript">
+        addItem = () => {
+            let index = 0,
+                names = ["Алина", "Наталья", "Марина", "Екатерина", "Юлия", "Мария",
+                    "Анастасия", "Елена"],
+                list = document.getElementById("list");
+            for (let i = list.children.length - 1; i >= 0; i--) {
+                let newNode = document.createElement("li");
+                index++;
+                let newTextNode = document.createTextNode(index + ") " + names[i]);
+                newNode.appendChild(newTextNode);
+                list.replaceChild(newNode, list.children[index - 1]);
+            }
         }
     </script>
 </head>
-<body onLoad="sDate()">
-    <p>Заданная дата - <b id='myDate'></b></p>
-    <p>Текущая дата - <b id='Date'></b></p>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul>
+    <input type="button" onclick="addItem();" value="Замена пункта" />
 </body>
 </html>

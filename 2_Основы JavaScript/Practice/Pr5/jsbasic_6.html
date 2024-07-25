@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Задание 5.6. Ссылка на новый объект Window</title>
+    <title>Удаление элементов</title>
     <script>
-        {
-            "use strict";
-            let newWindow;
-            function openWindow() {
-                newWindow = window.open("https://ya.ru/", "NewWindow");
-                newWindow.focus();
+        Item = () => {
+            let s = "",
+                list = document.getElementById("list")
+            for (let i = 0; i < list.childNodes.length; i++) {
+                let child = list.childNodes[i];
+                s += child.nodeName + ": " + child.nodeValue + " (" + child.nodeType +
+                    ")\n";
+            }
+            window.alert(s);
+        }
+        removeItem = () => {
+            let listItem = document.getElementById('list');
+            if (listItem.childNodes.length > 0) {
+                listItem.removeChild(listItem.firstChild);
             }
         }
     </script>
 </head>
 <body>
-    <a href="javascript:void(0)" onClick="openWindow()">Отобразить начальную страницу в новом окне</a>
+    <ol id='list'>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+    <input type="button" value="Удалить" onClick="removeItem();">
+    <input type="button" value="Определить дочерние элементы" onClick="Item();">
 </body>
+
 </html>

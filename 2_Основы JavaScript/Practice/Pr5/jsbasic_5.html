@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.5. Расчет положения верхнего левого угла браузера </title>
-    <script>
-        {
-            "use strict";
-            function coordScreen() {
-                coord = document.getElementById('coords');
-                coord.innerHTML = "<b>screenLeft</b> = " + window.screenLeft +"<br><b>screenTop</b> = " + window.screenTop + "<br> <b>screenX</b> = " + window.screenX + "<br> <b>screenY</b> = " + window.screenY + "<br>";
+    <title>Задание 6.5. Получение информации о дочерних элементах узла</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            let s = "";
+            a = document.getElementById("para")
+            for (var i = 0; i < a.childNodes.length; i++) {
+                b = a.childNodes[i]
+                s += b.nodeName + ": " + b.nodeValue + " (" + b.nodeType + ")\n";
             }
+            window.alert(s);
         }
     </script>
 </head>
 <body>
-    <div style="width:200px; height:200px; border:1px solid red;" id="coords"></div>
-    <input type="submit" onclick="coordScreen()" />
+    <p id="para">один
+        <em class="a">два</em>
+        <b>три</b>
+        методичка
+        <!-- Начинается форма-->
+        <input type="button">
+    </p>
 </body>
 </html>

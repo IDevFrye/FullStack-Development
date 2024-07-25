@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <title>Задание 5.9. Определение CSS стилей элемента </title>
+    <meta charset="UTF-8">
+    <title>Задание 6.9 Создание и добавление атрибутов</title>
     <script>
-        {
-            "use strict";
-            function styleCurrent() {
-                let divBg = document.getElementsByClassName("myDiv")[0];
-                let divBgcolor;
+        index = 4;
+        addItem = () => {
+            let listOfItems = document.getElementById('list'),
+                newLi = document.createElement('li'),
+                newFont = document.createElement('font');
+            newFont.setAttribute('color', 'red');
+            newFont.setAttribute('size', '4');
+            index++;
+            let newTextNode = document.createTextNode('Пункт ' + index);
+            newFont.appendChild(newTextNode);
+            newLi.appendChild(newFont);
+            listOfItems.appendChild(newLi);
+        }
 
-                if (divBg.style) {
-                    divBgcolor = divBg.style['backgroundColor'];
-                }
-                console.log(divBgcolor);
-            }
+        itemAt = () => {
+            let itrmG = document.getElementById('itemA');
+            itrmG.setAttribute('color', 'green');
+            itrmG.setAttribute('size', '4');
         }
     </script>
 </head>
 <body>
-    <div class="myDiv" style="background-color:red; height:300px; font-family:Arial,Helvetica,sans-serif">jhdafhgf</div>
-    <input type="button" value="Определить стиль" onClick="styleCurrent()" />
+    <ol id='list'>
+        <li>Пункт 1</li>
+        <li>Пункт 2</li>
+        <li>Пункт 3</li>
+        <li>Пункт 4</li>
+    </ol>
+    <font id='itemA'>as</font><br>
+    <input type="button" value="Добавить" onClick="addItem();">
+    <input type="button" value="Добавить к существующему элементу" onClick="itemAt();">
 </body>
+
 </html>

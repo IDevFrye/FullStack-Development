@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.8. Метод print()</title>
+    <title>Метод createTextNode(). Создание текстовых элементов</title>
     <script>
-        {
-            "use strict";
-
-            function printWindow() {
-                window.print();
-            }
+        let index = 1;
+        addItem = () => {
+            let list = document.getElementById("list");
+            let newLi = document.createElement("li");
+            index++;
+            let newTextNode = document.createTextNode("Item " + index);
+            newLi.appendChild(newTextNode);
+            list.appendChild(newLi);
         }
     </script>
 </head>
 <body>
-    <input type="button" value="Печать" onclick="printWindow()" />
+    <ul id="list">
+        <li>Item 1</li>
+    </ul>
+    <input type="button" onclick="addItem();" value="Add item" />
 </body>
 </html>

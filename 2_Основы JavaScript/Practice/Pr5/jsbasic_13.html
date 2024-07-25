@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Задание 5.13. Использование массива для возвращения названия месяца
-    </title>
-    <script>
-        sDate = () => {
-            let month_names = new Array(12)
-            month_names[0] = "Январь";
-            month_names[1] = "Февраль";
-            month_names[2] = "Март";
-            month_names[3] = "Апрель";
-            month_names[4] = "Май";
-            month_names[5] = "Июнь";
-            month_names[6] = "Июль";
-            month_names[7] = "Август";
-            month_names[8] = "Сентябрь";
-            month_names[9] = "Октябрь";
-            month_names[10] = "Ноябрь";
-            month_names[11] = "Декабрь";
-            let date_now = new Date(2001, 7, 23);
-            let month_now = date_now.getMonth();
-            let date = "getMonth() возвращает " + month_now + "; месяц " +
-                month_names[month_now];
-            document.getElementById('Date').innerHTML = date;
-        }
-    </script>
+    <title>Задание 6.13. Свойство innerHTML. Изменение фрагментов кода
+        HTML</title>
 </head>
-<body onLoad="sDate()">
-    <p>Текущая дата - <b id='Date'></b></p>
+<body>
+    <div id="urgent">
+        <h1>Внимание</h1>Веб-сервер атакован!
+    </div>
+    <script>
+        let nextColor = 0;
+        anime = () => {
+            let e = document.getElementById("urgent");
+            e.style.border = "solid black 5px";
+            e.style.padding = "50px";
+            let colors = ["white", "yellow", "orange", "red"];
+            if (nextColor < colors.length - 1) {
+                nextColor = nextColor + 1;
+                e.style.borderColor = colors[nextColor]
+            } else {
+                nextColor = 1
+                e.style.borderColor = colors[nextColor]
+            }
+        }
+        setInterval('anime()', 1000);
+    </script>
 </body>
 </html>

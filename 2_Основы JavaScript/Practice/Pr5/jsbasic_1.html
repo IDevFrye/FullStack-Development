@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.1. Демонстрация метода setTimeout()</title>
+    <title>Задание 6.1. Доступ к узлам DOM через id</title>
     <script>
-        {
-            "use strict";
-            clear_status = () => {
-                        alert("Hello, World!");
-            }
-            let timeout_id = window.setTimeout(clear_status, 5000);
+        window.onload = function () {
+            let a = document.getElementById('first'),
+                b = document.getElementById('second');
+            alert(a);
+            alert(b);
         }
     </script>
 </head>
 <body>
+    <p id='first'>DOM</p>
+    <i id='second'>DOM I</i>
 </body>
 </html>

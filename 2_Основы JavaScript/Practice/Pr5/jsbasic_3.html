@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.3. Демонстрация метода setInterval()</title>
+    <title>Задание 5.3 Доступ к узлам DOM через имя тега</title>
     <script>
-        {
-            "use strict";
-            let counter = 10;
-            let interval_id = setInterval("countdown()", 1000);
-
-            countdown = () => {
-                document.getElementById('cont').innerHTML = counter--
-                if (counter < 0) {
-                    clearInterval(interval_id);
-                    document.getElementById('cont').style = "display:none";
-                }
-            }
+        window.onload = function () {
+            a = document.getElementsByTagName('p');
+            b = document.getElementsByTagName('i');
+            alert(a[0]);
+            alert(b[0]);
+            c = a.length;
+            d = b.length;
+            alert(c + ' p элемента');
+            alert(d + ' i элемента');
         }
     </script>
 </head>
 <body>
-    <p id='cont'></p>
+    <p>DOM</p>
+    <i>DOM I</i>
+    <p>DOM</p>
+    <i>DOM I</i>
+    <i>DOM I</i>
+    <p>DOM</p>
+    <p>DOM</p>
 </body>
 </html>

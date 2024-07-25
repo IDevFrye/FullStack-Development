@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Задание 5.7 Смещение окна по оси X и Y </title>
+    <title> Создание и добавление элементов </title>
     <script>
-        {
-            "use strict";
-
-            let newWindow;
-            function openWindow() {
-                newWindow = window.open('', '', 'height=200,width=300');
-            }
-            function moveByX() {
-                newWindow.moveBy(10, 0)
-            }
-
-            function moveByY() {
-                newWindow.moveBy(0, 10)
-            }
+        function addItem() {
+            let listOfItems = document.getElementById('list');
+            //let br = document.createElement('br');
+            let li = document.createElement('li');
+            li.innerHTML = "Елена";
+            //listOfItems.appendChild(br);
+            listOfItems.appendChild(li);
+            let listAOfItems = document.getElementById('listA');
+            li = document.createElement('li');
+            li.innerHTML = "Анастасия";
+            listAOfItems.appendChild(li);
         }
     </script>
 </head>
 <body>
-    <input type="button" value="Открыть" onclick="openWindow()" />
-    <br /><br />
-    <input type="button" value="Смещение по оси X" onclick="moveByX()" />
-    <br /><br />
-    <input type="button" value="Смещение по оси Y" onclick="moveByY()" />
+    <ol id='list'>
+        <li>Алина</li>
+        <li>Наталья</li>
+        <li>Марина</li>
+        <li>Юлия</li>
+        <li>Мария</li>
+    </ol>
+    <ol id='listA'>
+        <li>Алина</li>
+        <li>Наталья</li>
+        <li>Марина</li>
+        <li>Юлия</li>
+        <li>Мария</li>
+    </ol>
+    <input type="button" value="Добавить" onClick="addItem();">
 </body>
 </html>

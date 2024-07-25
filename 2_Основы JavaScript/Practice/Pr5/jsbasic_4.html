@@ -1,24 +1,28 @@
-<!DOCTYPE html>
-<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.4. Свойства объекта window.screen</title>
-    <script>
-        {
-            "use strict";
-            document.write("<b>Максимальная ширина равна " + window.screen.width + "пикселей.</b > <br>");
-            document.write("<b> Доступная ширина равна " + window.screen.availWidth +" пикселей.</b><br>");
-            document.write("<p>");
-            document.write("<b>Максимальная высота равна " + window.screen.height + "пикселей.</b><br>");
-            document.write("<b> Доступная высота равна " + window.screen.availHeight +" пикселей.</b><br>");
-            document.write("<p>");
-            document.write("<b>Глубина цвета равна " + window.screen.colorDepth + "битов на пиксель.</b><br>");
+    <title>Задание 10.4. Доступ к узлам DOM через свойство className</title>
+    <style type="text/css">
+        .bgRedText {
+            background-color: red;
+        }
+
+        .bgGreenText {
+            background-color: green;
+        }
+    </style>
+    <script type="text/javascript">
+        function styleReplace() {
+            a = document.getElementById('textP');
+            alert(a)
+            alert(a.className)
+            a.className = 'bgGreenText'
+            alert(a.className)
         }
     </script>
 </head>
-
 <body>
+    <p class='bgRedText' id='textP'>Текст</p>
+    <input type="button" onClick="styleReplace()" value="Изменить стиль">
 </body>
-
 </html>
