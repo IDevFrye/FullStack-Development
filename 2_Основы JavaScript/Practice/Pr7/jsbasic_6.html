@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Задание 5.6. Ссылка на новый объект Window</title>
+    <title>8.6 Проверка выбранных флажков</title>
     <script>
         {
             "use strict";
-            let newWindow;
-            function openWindow() {
-                newWindow = window.open("https://ya.ru/", "NewWindow");
-                newWindow.focus();
+            function Fruit() {
+                let selection = 'Вы выбрали:';
+                with (document.forms.Contact) {
+                    if (HS.checked == true) selection += 'Яблоко';
+                    if (AD.checked == true) selection += ', Апельсин';
+                    if (BD.checked == true) selection += ', Манго';
+                    if (MD.checked == true) { selection += ', Ананас'; }
+                    if (DD.checked == true) { selection += ', Грейпфрут'; }
+                }
+                alert(selection);
             }
         }
     </script>
 </head>
 <body>
-    <a href="javascript:void(0)" onClick="openWindow()">Отобразить начальную страницу в новом окне</a>
+    <form name="Contact" action="http://www..com" method="post">
+        <p>
+            <input type="checkbox" name="HS" value="HS">Яблоко<br />
+            <input type="checkbox" name="AD" value="AD">Апельсин<br />
+            <input type="checkbox" name="BD" value="BD">Манго<br />
+            <input type="checkbox" name="MD" value="MD">Ананас<br />
+            <input type="checkbox" name="DD" value="DD">Грейпфрут<br />
+            <input name="Process" value="Process" type='reset' onclick="Fruit();">
+        </p>
+    </form>
 </body>
 </html>

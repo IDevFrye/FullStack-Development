@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.4. Свойства объекта window.screen</title>
+    <title>8.4 Изменение элемента</title>
     <script>
         {
             "use strict";
-            document.write("<b>Максимальная ширина равна " + window.screen.width + "пикселей.</b > <br>");
-            document.write("<b> Доступная ширина равна " + window.screen.availWidth +" пикселей.</b><br>");
-            document.write("<p>");
-            document.write("<b>Максимальная высота равна " + window.screen.height + "пикселей.</b><br>");
-            document.write("<b> Доступная высота равна " + window.screen.availHeight +" пикселей.</b><br>");
-            document.write("<p>");
-            document.write("<b>Глубина цвета равна " + window.screen.colorDepth + "битов на пиксель.</b><br>");
+            function SetEmail() {
+                with (document.forms.Contact) {
+                    if (Fname.value.length > 0 && Lname.value.length > 0) {
+                        Email.value = Fname.value.charAt(0) + Lname.value +
+                            '@mycompany.com';
+                    }
+                }
+            }
         }
     </script>
 </head>
-
 <body>
+    <form name="Contact" action="http://www.com" method="post">
+        <p>
+            First Name: <input type="text" name="Fname" onchange="SetEmail();" /><br />
+            Last Name: <input type="text" name="Lname" onchange="SetEmail();" /><br />
+            Email: <input type="text" name="Email" /><br />
+            <input name="Submit" value="Submit" type="submit" />
+            <input name="Reset" value="Reset" type="reset" />
+        </p>
+    </form>
 </body>
-
 </html>

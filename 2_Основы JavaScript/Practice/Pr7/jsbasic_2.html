@@ -2,22 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.2. Демонстрация метода clearTimeout()</title>
+    <title>8.2 Доступ к атрибутам объектов</title>
     <script>
         {
             "use strict";
-            let timeout_id = window.setTimeout("hello_status()", 5000);
-            hello_status = () => {
-                alert("Hello, World!");
-            }
-            cancel_status = () => {
-                clearTimeout(timeout_id);
-                alert("Задержка отменена!");
+            function display() {
+                alert('Значение:' + document.forms.order.Email.value);
             }
         }
     </script>
 </head>
 <body>
-    <button onclick="cancel_status()">Отмена задержки</button>
+    <form action="http://www..com" method="post" name="order">
+        <p>
+            Имя: <input type="text" name="Fname" /><br />
+            Фамилия: <input type="text" name="Lname"><br />
+            Email: <input type="text" name="Email" /><br />
+            <input name="Submit" value="Submit" type="submit" onclick="display();" />
+            <input name="Reset" value="Reset" type="reset" />
+        </p>
+    </form>
 </body>
 </html>

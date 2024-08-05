@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Задание 5.1. Демонстрация метода setTimeout()</title>
-    <script>
-        {
-            "use strict";
-            clear_status = () => {
-                        alert("Hello, World!");
+    <title> Событие onblur </title>
+    <!DOCTYPE html>
+    <html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>8.1 Событие onBlur</title>
+        <script>
+            {
+                "use strict";
+                function ValidateEmail(EmailAddress) {
+                    let Location = EmailAddress.indexOf('@')
+                    if (Location == -1) {
+                        alert('Введите Email.');
+                    }
+                }
             }
-            let timeout_id = window.setTimeout(clear_status, 5000);
-        }
-    </script>
-</head>
+        </script>
+    </head>
+
 <body>
+    <form action="http://www.ya.ru" method="post">
+        <p> Имя: <input type="text" name="Fname" /><br />
+            Фамилия: <input type="text" name="Lname" /><br />
+            Email: <input type="text" name="Email" onblur="ValidateEmail(this.value)" /><br />
+            <input name="Submit" value="Submit" type="submit" />
+            <input name="Reset" value="Reset" type="reset" />
+        </p>
+    </form>
 </body>
+
 </html>

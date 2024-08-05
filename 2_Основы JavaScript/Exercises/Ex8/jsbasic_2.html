@@ -2,10 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Работа 2-х таймеров</title>
+    <title>8.2 Доступ к атрибутам объектов</title>
 </head>
 <body>
-    <script src="jsbasic_2.js"></script>
+    <form action="http://www..com" method="post" name="order">
+        <label>Имя: <br><input type="text" name="Fname" /></label><br>
+        <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+        <label>Email: <br><input type="text" name="Email" /></label><br>
+        <button id="sendForm">Отправить</button>
+    </form>
+    <p class="valueOfEmail"></p>
+    <script defer>
+        {
+            "use strict";
+
+            function display(event) {
+                event.preventDefault();
+                let inputs = document.forms[0].Email.value;
+                let valueEmail = document.getElementsByClassName("valueOfEmail")[0];
+                valueEmail.innerHTML = `Значение: ${inputs}`;
+            }
+
+            document.getElementById('sendForm').addEventListener('click', display);
+        }
+    </script>
 </body>
 </html>

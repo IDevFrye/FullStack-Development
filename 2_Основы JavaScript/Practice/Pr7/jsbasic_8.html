@@ -2,18 +2,17 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.8. Метод print()</title>
-    <script>
-        {
-            "use strict";
-
-            function printWindow() {
-                window.print();
-            }
-        }
-    </script>
+    <title>8.8 Использование встроенных функций JavaScript</title>
 </head>
 <body>
-    <input type="button" value="Печать" onclick="printWindow()" />
+    <form name="Contact" action="http://www.jimkeogh.com" method="get">
+        <p>
+            First Name: <input type="text" name="Fname" /><br />
+            Last Name: <input type="text" name="Lname" /><br />
+            Email: <input type="hidden" name="Email" /><br />
+            <img src="mysubmit.gif" onclick="javascript:document.forms.Contact.submit();" />
+            <img src="myreset.gif" onclick="javascript:document.forms.Contact.reset();" />
+        </p>
+    </form>
 </body>
 </html>

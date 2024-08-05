@@ -1,20 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.5. Расчет положения верхнего левого угла браузера </title>
+    <title>8.5 Динамическое изменение значений элементов списка</title>
     <script>
         {
             "use strict";
-            function coordScreen() {
-                coord = document.getElementById('coords');
-                coord.innerHTML = "<b>screenLeft</b> = " + window.screenLeft +"<br><b>screenTop</b> = " + window.screenTop + "<br> <b>screenX</b> = " + window.screenX + "<br> <b>screenY</b> = " + window.screenY + "<br>";
+            function ResetOptionList(ElementValue) {
+                with (document.forms.Contact) {
+                    if (ElementValue == 1) {
+                        OptionList[0].text = 'Classic';
+                        OptionList[0].value = 1;
+                        OptionList[1].text = 'Police Cruiser';
+                        OptionList[1].value = 2;
+                    }
+                    if (ElementValue == 2) {
+                        OptionList[0].text = 'Ford';
+                        OptionList[0].value = 1;
+                        OptionList[1].text = 'Chevy';
+                        OptionList[1].value = 2;
+                    }
+                }
             }
         }
     </script>
 </head>
 <body>
-    <div style="width:200px; height:200px; border:1px solid red;" id="coords"></div>
-    <input type="submit" onclick="coordScreen()" />
+    <form name="Contact" action="http://www.jimkeogh.com" method="post">
+        <p>
+            <select name="OptionList" size="2">
+                <option value=1>Classic</option>
+                <option value=2>Police Cruiser</option>
+            </select>
+            <br />
+            <input type="radio" name="vehicles" checked="true" value=1
+                onclick="ResetOptionList(this.value);">Motorcycles
+            <input type="radio" name="vehicles" Value=2 onclick="ResetOptionList(this.value);">Cars
+            <br />
+            <input name="Submit" value="Submit" type="submit" />
+            <input name="Reset" value="Reset" type="reset" />
+        </p>
+    </form>
 </body>
 </html>

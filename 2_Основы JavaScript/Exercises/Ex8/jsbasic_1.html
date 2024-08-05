@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 5.1 Таймер setTimeout()</title>
+    <title>8.1 Событие onBlur</title>
+    <script src="jsbasic_1.js"></script>
 </head>
 <body>
-    <script src="jsbasic_1.js"></script>
+    <form action="http://www.ya.ru" method="post">
+        <label>Имя: <br><input type="text" name="Fname"></label><br>
+        <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+        <label>Email: <br><input type="text" name="Email" onblur="checkInputEmail(this.value)"></label><br>
+        <input name="Submit" value="Submit" type="submit" />
+        <input name="Reset" value="Reset" type="reset" />
+    </form>
 </body>
 </html>

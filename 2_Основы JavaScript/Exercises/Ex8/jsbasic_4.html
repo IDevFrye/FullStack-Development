@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.4 Изменение оформления формы</title>
+    <style>
+        form {
+            font-size: 18px;
+        }
+
+        input {
+            font-size: 18px;
+        }
+    </style>
     <script src="jsbasic_4.js"></script>
-    <title>Задание 5.4</title>
 </head>
 <body>
-    <div class="myDiv" style="background-color:red; height:300px; font-family:Arial,Helvetica, sans-serif">Текст в блоке
-    </div>
-    <p></p>
-    <input type="button" value="Получить стиль" onClick="getStyle('backgroundColor')" />
+    <form action="http://www.ya.ru" method="post">
+        <label>Имя: <br><input type="text" name="Fname"></label><br>
+        <label>Фамилия: <br><input type="text" name="Lname"></label><br>
+        <label>Email: <br><input type="text" name="Email" onblur="checkInputEmail(this.value)"></label><br>
+        <p class="checkEmail"></p>
+        <input name="Submit" value="Submit" type="submit" />
+        <input name="Reset" value="Reset" type="reset" />
+    </form>
 </body>
 </html>

@@ -2,24 +2,27 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 5.3. Демонстрация метода setInterval()</title>
+    <title>8.3 Доступ к атрибутам объектов </title>
     <script>
         {
             "use strict";
-            let counter = 10;
-            let interval_id = setInterval("countdown()", 1000);
-
-            countdown = () => {
-                document.getElementById('cont').innerHTML = counter--
-                if (counter < 0) {
-                    clearInterval(interval_id);
-                    document.getElementById('cont').style = "display:none";
-                }
+            function Highlight(Element) {
+                Element.style.color = 'blue';
+                Element.style.backgroundColor = 'silver';
+                Element.style.borderStyle = 'solid';
+                Element.style.borderColor = "red";
             }
         }
     </script>
 </head>
 <body>
-    <p id='cont'></p>
+    <form name="Contact" action="http://www..com" method="post">
+        <p> First Name: <input value="" type="text" name="Fname" onchange="Highlight(this);" /><br />
+            Last Name: <input value="" type="text" name="Lname" onchange="Highlight(this);" /><br />
+            Email: <input value="" type="text" name="Email" onchange="Highlight(this); " /><br />
+            <input name="Submit" value="Submit" type="submit" />
+            <input name="Reset" value="Reset" type="reset" />
+        </p>
+    </form>
 </body>
 </html>

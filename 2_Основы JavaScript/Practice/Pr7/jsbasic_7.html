@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Задание 5.7 Смещение окна по оси X и Y </title>
+    <title>8.7 Изменение элементов перед отправкой формы</title>
     <script>
         {
             "use strict";
-
-            let newWindow;
-            function openWindow() {
-                newWindow = window.open('', '', 'height=200,width=300');
-            }
-            function moveByX() {
-                newWindow.moveBy(10, 0)
-            }
-
-            function moveByY() {
-                newWindow.moveBy(0, 10)
+            function SetEmail() {
+                with (document.forms.Contact) {
+                    if (Fname.value.length > 0 && Lname.value.length > 0) {
+                        Email.value = Fname.value.charAt(0) + Lname.value +
+                            'mycompany.com';
+                    }
+                }
             }
         }
     </script>
 </head>
 <body>
-    <input type="button" value="Открыть" onclick="openWindow()" />
-    <br /><br />
-    <input type="button" value="Смещение по оси X" onclick="moveByX()" />
-    <br /><br />
-    <input type="button" value="Смещение по оси Y" onclick="moveByY()" />
+    <form name="Contact" action="http://www..com" method="get">
+        <p>
+            First Name: <input type="text" name="Fname" /><br />
+            Last Name: <input type="text" name="Lname" /><br />
+            Email: <input type="hidden" name="Email" /><br />
+            <input name="Submit" value="Submit" type="submit" onClick="SetEmail();" />
+            <input name="Reset" value="Reset" type="reset" />
+        </p>
+    </form>
 </body>
 </html>

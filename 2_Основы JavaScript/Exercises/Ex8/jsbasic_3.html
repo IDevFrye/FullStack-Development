@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 5.3. Демонстрация метода setInterval()</title>
+    <title>8.3 Динамическое изменение значений элементов списка</title>
+    <script src="jsbasic_3.js"></script>
+    <style>
+        .typeOfVehicles label {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <script src="jsbasic_3.js"></script>
-    <p id='cont'></p>
+    <form name="cars" action="http://www.jimkeogh.com" method="post">
+        <select name="OptionList" size="5">
+            <option value=1>Classic</option>
+            <option value=2>Police Cruiser</option>
+        </select><br>
+
+        <div class="typeOfVehicles">
+            <label><input type="radio" name="vehicles" checked="true" value=1 onclick="ResetOptionList(this.value);">
+                Motorcycles</label>
+            <label><input type="radio" name="vehicles" value=2 onclick="ResetOptionList(this.value);">Cars</label>
+        </div>
+        <input name="Submit" value="Submit" type="submit" />
+        <input name="Reset" value="Reset" type="reset" />
+    </form>
 </body>
 </html>
