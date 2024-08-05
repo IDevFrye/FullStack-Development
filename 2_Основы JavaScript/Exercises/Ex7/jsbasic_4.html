@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jsbasic_4.js"></script>
-    <title>Задание 5.4</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.0/dist/js.cookie.min.js"></script>
+    <title>Задание 7.4 Основы работы с библиотекой js-cookie</title>
 </head>
-<body>
-    <div class="myDiv" style="background-color:red; height:300px; font-family:Arial,Helvetica, sans-serif">Текст в блоке
+<!--При загрузке страницы вызывается метод getCookies исходный код метода будет рассмотрен ниже-->
+
+<body onload="getCookies()">
+    <div>
+        <!--Форма авторизации. Принимает логин и пароль и отправляет его на обработку методом login()-->
+        <label>
+            Логин:<br>
+            <input type="text" placeholder="Введите логин" id="login">
+        </label><br>
+        <label>
+            Пароль:<br>
+            <input type="text" placeholder="Введите пароль" id="password">
+        </label>
+        <button class="logIn" onclick="login()">Войти</button>
     </div>
-    <p></p>
-    <input type="button" value="Получить стиль" onClick="getStyle('backgroundColor')" />
+    <!--Тег параграфа с классом saveCookie будет получать строку имя=значение из сохраненных кук-->
+    <p class="saveCookie"></p>
+    <!--Внешний скрипит script.js в котором будут реализованы метода getCookies() и login()-->
+    <script src="jsbasic_4.js"></script>
 </body>
+
 </html>

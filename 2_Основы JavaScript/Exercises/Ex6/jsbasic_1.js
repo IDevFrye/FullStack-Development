@@ -1,4 +1,4 @@
-let startTimer = () => {
-    let timeid = window.setTimeout(() => {alert("Hello")}, 2000)
-}
-startTimer();
+let first = document.getElementById("first");
+let second = document.getElementById("second");
+alert(first);
+alert(second);
