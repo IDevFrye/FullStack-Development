@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Comfortaa;
+    margin: 0;
+    background-color: rgb(243, 246, 253);
+    font-weight: 400;
+}
+
+.app {
+    display: flex;
+}
+
+.panel {
+    background: white;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+    flex-flow: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu__item {
+    border-radius: 14px;
+    box-shadow: 0px 8px 14px 0px rgba(62, 107, 224, 0.12);
+    background: rgb(255, 255, 255);
+    border: none;
+    height: 45px;
+    width: 45px;
+}
+
+.menu__item:hover {
+    background-color: rgb(80, 81, 249);
+    img {
+        filter: brightness(0) invert(1);
+    }
+        cursor: pointer;
+}
+
+.menu__item_active {
+    background-color: rgb(80, 81, 249);
+    img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.menu__add {
+    box-sizing: border-box;
+    border: 1px solid rgb(202, 213, 255);
+    border-radius: 14px;
+    background: none;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.menu__add:hover {
+    background-color: #f3f5fd;
+}
+
+/*---------Right Side----------*/
+
+.content {
+    min-width: 900px;
+    padding: 45px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: Comfortaa;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 235px;
+}
+
+.progress__text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress__name {
+    color: rgb(35, 35, 96);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+}
+
+.progress__percent {
+    color: rgb(118, 131, 150);
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0%;
+}
+
+.progress__bar {
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(230, 233, 237);
+    height: 5px;
+    position: relative;
+}
+
+.progress__cover-bar {
+    position: absolute;
+    width: 80%;
+    border-radius: 4px;
+    background: rgb(80, 81, 249);
+    height: 5px;
+}
+
+main {
+    margin-top: 30px;
+}
+
+.habbit {
+    display: flex;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.habbit__day {
+    background: rgb(251, 250, 255);
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid rgb(231, 235, 251);
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    padding: 20px 45px;
+    min-width: 150px;
+}
+
+.habbit__comment {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    padding: 20px 25px;
+}
+
+.habbit__delete {
+    margin-left: auto;
+    margin-right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.habbit__delete:hover {
+    background-color: #f3f5fd;
+}
+
+input {
+    border: 1px solid rgb(231, 235, 251);
+    border-radius: 9px;
+    background: rgb(255, 255, 255);
+    padding: 12px 20px;
+    font-family: Comfortaa;
+    flex: 1;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+}
+
+input::placeholder {
+    color: rgb(136, 153, 168);
+}
+
+.habbit__form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 0px 10px 0px 25px;
+    position: relative;
+}
+
+.input__icon {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+
+.input_icon {
+    padding-left: 45px;
+}
+
+.button {
+    border-radius: 9px;
+    background: rgb(237, 236, 254);
+    border: none;
+    color: rgb(80, 81, 249);
+    font-size: 13px;
+    font-family: Comfortaa;
+    line-height: 14px;
+    letter-spacing: 0%;
+    padding: 14px 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: rgb(223, 222, 253);
+}

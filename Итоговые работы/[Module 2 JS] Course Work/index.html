@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habbit App</title>
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <script src="./scripts/app.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="./images/logo.svg" alt="Habbit App логотип">
+            <nav class="menu">
+                <div class="menu__list"></div>
+                <button class="menu__add">
+                    <img src="./images/add.svg" alt="Добавить привычку">
+                </button>
+            </nav>
+        </div>
+        <div class="content">
+            <header>
+                <h1>Отжимания</h1>
+                <div class="progress">
+                    <div class="progress__text">
+                        <div class="progress__name">Прогресс</div>
+                        <div class="progress__percent">80%</div>
+                    </div>
+                    <div class="progress__bar">
+                        <div class="progress__cover-bar"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div class="habbit">
+                        <div class="habbit__day">День 1</div>
+                        <div class="habbit__comment">Первый подход всегда даётся тяжело</div>
+                        <button class="habbit__delete">
+                            <img src="./images/delete.svg" alt="Удалить день">
+                        </button>
+                    </div>
+                    <div class="habbit">
+                        <div class="habbit__day">День 2</div>
+                        <form class="habbit__form">
+                            <input class="input_icon" type="text" placeholder="Комментарий">
+                            <img class="input__icon" src="./images/comment.svg" alt="Иконка комментария">
+                            <button class="button">Готово</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
