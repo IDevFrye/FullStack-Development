@@ -61,6 +61,10 @@ body {
     }
 }
 
+.menu__item_active:hover {
+    background-color: #6a6afb;
+}
+
 .menu__add {
     box-sizing: border-box;
     border: 1px solid rgb(202, 213, 255);
@@ -134,10 +138,10 @@ h1 {
 
 .progress__cover-bar {
     position: absolute;
-    width: 80%;
     border-radius: 4px;
     background: rgb(80, 81, 249);
     height: 5px;
+    transition: all .5s;
 }
 
 main {
@@ -201,6 +205,12 @@ input::placeholder {
     color: rgb(136, 153, 168);
 }
 
+input.error {
+    border: 1px solid red;
+    background-color: rgb(255, 247, 247);
+    transition: .5s ease-out;
+}
+
 .habbit__form {
     display: flex;
     gap: 15px;
@@ -234,4 +244,107 @@ input::placeholder {
 
 .button:hover {
     background: rgb(223, 222, 253);
+}
+
+.cover {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover_hidden {
+    display: none;
+}
+
+.popup {
+    border-radius: 10px;
+    box-shadow: 0px 8px 14px 12px rgba(56, 56, 56, 0.05);
+    background: rgb(255, 255, 255);
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0%;
+}
+
+.icon-label {
+    color: rgb(118, 131, 150);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+}
+
+.icon-select {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    border: 1px solid rgb(80, 81, 249);
+    border-radius: 14px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.icon_active {
+    background: rgb(80, 81, 249);
+}
+
+.icon:hover {
+    background-color: rgb(80, 81, 249);
+    img {
+        filter: brightness(0) invert(1);
+    }
+    cursor: pointer;
+}
+
+.icon_active:hover {
+    background-color: #6a6afb;
+    cursor: pointer;
+}
+
+.icon_active img {
+    filter: brightness(0) invert(1);
+}
+
+.popup__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.popup__form input {
+    width: 100%;
 }
