@@ -1,8 +1,11 @@
 'use strict';
 
 let habbits = [];
+let doneHabbits = [];
+const DONE_HABBIT_KEY = 'DONE_HABBIT_KEY';
 const HABBIT_KEY = 'HABBIT_KEY';
 let globalActiveHabbitId;
+let globalActiveHabbit;
 
 /* page */
 const page = {
@@ -15,7 +18,8 @@ const page = {
     content: {
         daysContainer: document.getElementById('days'),
 		nextDay: document.querySelector('.habbit__day'),
-        input: document.querySelector('.input_icon')
+        input: document.querySelector('.input_icon'),
+        done: document.querySelector('.settings button')
     },
     popup: {
         index: document.getElementById('add-habbit-popup'),
@@ -36,6 +40,10 @@ function loadData() {
 //Сохранение данных
 function saveData() {
     localStorage.setItem(HABBIT_KEY, JSON.stringify(habbits));
+}
+
+function saveDataDone() {
+    localStorage.setItem(DONE_HABBIT_KEY, JSON.stringify(doneHabbits));
 }
 
 function togglePopup() {
@@ -88,10 +96,11 @@ function rerenderMenu(activeHabbit) {
             element.classList.add('menu__item');
             element.addEventListener('click', () => {
                 rerender(habbit.id);
-            })
+            });
             element.innerHTML = `<img src="./images/${habbit.icon}.svg" alt="${habbit.name}">`;
             if (activeHabbit.id === habbit.id){
                 element.classList.add('menu__item_active');
+                
             }
             page.menu.appendChild(element);
             continue;
@@ -132,11 +141,13 @@ function rerenderContent(activeHabbit) {
         page.content.daysContainer.appendChild(element);
     }
     page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
+    completeHabbitText(activeHabbit);
 }
 
 function rerender(activeHabbitId) {
     globalActiveHabbitId = activeHabbitId;
     const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
+    globalActiveHabbit = activeHabbit;
     document.location.replace(document.location.pathname + '#' + activeHabbitId);
     rerenderMenu(activeHabbit);
     rerenderHead(activeHabbit);
@@ -208,6 +219,41 @@ function addHabbit(event) {
     togglePopup();
     saveData();
     rerender(maxId + 1);
+}
+
+function completeHabbitText(activeHabbit){
+    if ((activeHabbit.days.length / activeHabbit.target) >= 1) {
+        page.content.done.innerText= 'Завершить привычку';
+    } else {
+        page.content.done.innerText='Удалить привычку';
+    }
+}
+
+function deleteHabbit(event) {
+    const tt = habbits.find(habbit => habbit.id === globalActiveHabbit.id);
+    const targId = habbits.indexOf(tt);
+    if ((globalActiveHabbit.days.length / globalActiveHabbit.target) >= 1) {
+        let ti = tt;
+        ti.timestamp = new Date();
+        doneHabbits.push(ti);
+        saveDataDone();
+    }
+    habbits.splice(targId, 1);
+    saveData();
+    const menuItem = document.querySelector(`[menu-habbit-id="${globalActiveHabbitId}"]`);
+    if (menuItem) {
+        menuItem.remove();
+    }
+    if (habbits.length > 0) {
+        rerender(habbits[0].id);
+    } else {
+        globalActiveHabbitId = null;
+        page.header.h1.innerText = "-";
+        page.header.progressPercent.innerText = "0%";
+        page.header.progressCoverBar.style.width = "0%";
+        page.content.daysContainer.innerHTML = "";
+        page.content.nextDay.innerHTML = "-";
+    }
 }
 
 //Инциализация
