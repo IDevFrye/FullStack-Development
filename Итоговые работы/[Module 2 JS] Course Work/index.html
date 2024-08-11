@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habbit App</title>
     <link rel="stylesheet" href="./styles/main.css"/>
+    <script src="https://kit.fontawesome.com/86d1196dac.js" crossorigin="anonymous"></script>
     <script src="./scripts/app.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
@@ -20,9 +21,11 @@
                 <button class="menu__add" onclick="togglePopup()">
                     <img src="./images/add.svg" alt="Добавить привычку">
                 </button>
+                <button class="button menu__completed" onclick="toggleCompleted()"><i class="fa-solid fa-trophy"></i></button>
             </nav>
         </div>
         <div class="content">
+            <div class="warning">Если данные не отобразились, перезагрузите страницу!</div>
             <header>
                 <h1 class="h1">-</h1>
                 <div class="progress">
@@ -35,7 +38,7 @@
                     </div>
                 </div>
             </header>
-            <main>
+            <main class="main">
                 <div id="days"></div>
                     <div class="habbit">
                         <div class="habbit__day">-</div>
@@ -76,11 +79,6 @@
                 </button>
             </div>
         </div>
-        <!-- <div id="delete-habbit" class="cover-settings">
-            <div class="settings">
-                <button class="button delete-button" onclick=""></button>
-            </div>
-        </div> -->
     </div>
 </body>
 </html>

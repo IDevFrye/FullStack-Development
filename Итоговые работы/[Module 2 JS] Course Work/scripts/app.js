@@ -31,9 +31,14 @@ const page = {
 //Загрузка данных
 function loadData() {
     const habbitsString = localStorage.getItem(HABBIT_KEY);
+    const habbitsDString = localStorage.getItem(DONE_HABBIT_KEY);
     const habbitArray = JSON.parse(habbitsString);
+    const habbitsDArray = JSON.parse(habbitsDString);
     if (Array.isArray(habbitArray)) {
-        habbits = habbitArray;
+    habbits = habbitArray;
+    }
+    if (Array.isArray(habbitsDArray)) {
+        doneHabbits = habbitsDArray;  //Исправлено на doneHabbits
     }
 }
 
@@ -130,30 +135,74 @@ function rerenderContent(activeHabbit) {
         return;
     }
     page.content.daysContainer.innerHTML = '';
-    for (const day in activeHabbit.days) {
-        const element = document.createElement('div');
-        element.classList.add('habbit');
-        element.innerHTML = `<div class="habbit__day">День ${Number(day) + 1}</div>
-              <div class="habbit__comment">${activeHabbit.days[day].comment}</div>
-              <button class="habbit__delete" onclick="deleteDay(${day})">
-                <img src="./images/delete.svg" alt="Удалить день ${Number(day) + 1}" />
-              </button>`;
-        page.content.daysContainer.appendChild(element);
+    if (habbits.length !== 0) {
+        for (const day in activeHabbit.days) {
+            const element = document.createElement('div');
+            element.classList.add('habbit');
+            element.innerHTML = `<div class="habbit__day">День ${Number(day) + 1}</div>
+                <div class="habbit__comment">${activeHabbit.days[day].comment}</div>
+                <button class="habbit__delete" onclick="deleteDay(${day})">
+                    <img src="./images/delete.svg" alt="Удалить день ${Number(day) + 1}" />
+                </button>`;
+            page.content.daysContainer.appendChild(element);
+        }
+        page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
+        completeHabbitText(activeHabbit);
     }
-    page.content.nextDay.innerHTML = `День ${activeHabbit.days.length + 1}`;
-    completeHabbitText(activeHabbit);
 }
 
+function toggleCompleted() {
+    const completedButton = document.querySelector('.menu__completed');
+    completedButton.classList.toggle('menu__completed_active');
+    if (completedButton.classList.contains('menu__completed_active')) {
+        renderCompletedHabbits();
+    } else {
+        document.querySelector('.settings').classList.remove('cover_hidden');
+        document.querySelector('.habbit').classList.remove('cover_hidden');
+        
+        rerender(habbits[0].id);
+    }
+}
+
+function renderCompletedHabbits() {
+    document.querySelector('main').classList.remove('cover_hidden');
+    page.content.daysContainer.innerHTML = ''; 
+    document.querySelector('.habbit').classList.add('cover_hidden');
+    document.querySelector('.settings').classList.add('cover_hidden');
+    doneHabbits.forEach(habbit => {
+        const element = document.createElement('div');
+        element.classList.add('habbit');
+        element.innerHTML = `<div class="habbit__day">${habbit.name}</div>
+            <div class="habbit__comment">Цель достигнута: ${habbit.days.length} дней</div>`;
+        page.content.daysContainer.appendChild(element);
+    });
+    
+    page.header.h1.innerText = "Завершенные привычки";
+    page.header.progressPercent.innerText = "100%";
+    page.header.progressCoverBar.style.width = "100%";
+}
+
+
 function rerender(activeHabbitId) {
-    globalActiveHabbitId = activeHabbitId;
-    const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
-    globalActiveHabbit = activeHabbit;
-    document.location.replace(document.location.pathname + '#' + activeHabbitId);
-    rerenderMenu(activeHabbit);
-    rerenderHead(activeHabbit);
-    rerenderContent(activeHabbit);
-    if (page.content.input) {
-        page.content.input.classList.remove('error');
+    document.querySelector('main').classList.remove('cover_hidden');
+    if (habbits.length === 0) {
+        page.content.daysContainer.innerHTML = '<div class="no-habbits">Добавьте новую привычку!</div>';
+        page.header.h1.innerText = "Добавьте привычку";
+        page.header.progressPercent.innerText = "0%";
+        page.header.progressCoverBar.style.width = "0%";
+        document.querySelector('main').classList.add('cover_hidden');
+        return;
+    } else {
+        globalActiveHabbitId = activeHabbitId;
+        const activeHabbit = habbits.find(habbit => habbit.id === activeHabbitId);
+        globalActiveHabbit = activeHabbit;
+        document.location.replace(document.location.pathname + '#' + activeHabbitId);
+        rerenderMenu(activeHabbit);
+        rerenderHead(activeHabbit);
+        rerenderContent(activeHabbit);
+        if (page.content.input) {
+            page.content.input.classList.remove('error');
+        }
     }
 }
 
@@ -253,6 +302,7 @@ function deleteHabbit(event) {
         page.header.progressCoverBar.style.width = "0%";
         page.content.daysContainer.innerHTML = "";
         page.content.nextDay.innerHTML = "-";
+        document.querySelector('main').classList.add('cover_hidden');
     }
 }
 
@@ -263,8 +313,10 @@ function deleteHabbit(event) {
     const urlHabbit = habbits.find(habbit => habbit.id == hashId);
     if (urlHabbit) {
         rerender(urlHabbit.id);
-    } else {
+    } else if (habbits[0]) {
         rerender(habbits[0].id);
+    } else {
+        rerender("no");
     }
 })()
 

@@ -148,6 +148,18 @@ main {
     margin-top: 30px;
 }
 
+.warning {
+    border-radius: 10px;
+    background: rgb(255, 196, 196);
+    padding: 10px;
+    font-size: 10px;
+    color: black;
+    width: 42%;
+    opacity: 50%;
+    position: absolute;
+    top:897px;
+}
+
 .habbit {
     display: flex;
     border-radius: 10px;
@@ -259,7 +271,7 @@ input.error {
 }
 
 .cover_hidden {
-    display: none;
+    display: none !important;
 }
 
 .popup {
@@ -377,4 +389,36 @@ h2 {
 main {
     display: flex;
     flex-flow: column;
+}
+
+.menu__completed {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 205, 131);
+    border-radius: 14px;
+    background: none;
+    height: 45px;
+    height: 45px;
+    cursor: pointer;
+    top: 890px;
+    padding: 10px 20px;
+}
+
+.menu__completed i {
+    font-size: 20px;
+    color: rgb(252, 135, 67);
+    
+}
+
+.menu__completed:hover {
+    background-color: #fff3d4;
+    
+}
+
+.menu__completed_active {
+    background-color: #ffe8a9;
+    border: 1px solid rgb(255, 144, 79);
+    i {
+            color: rgb(255, 255, 255);
+        }
 }
