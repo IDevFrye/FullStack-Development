@@ -12,7 +12,7 @@ This repository contains projects and exercises completed in the process of self
   </tr>
   <tr>
     <td colspan="2">
-      [Module 1]<br>
+      <b>[Module 1]</b><br>
       Three-page personal website
     </td>
   </tr>
@@ -44,7 +44,7 @@ This repository contains projects and exercises completed in the process of self
   </tr>
   <tr>
     <td colspan="2">
-      [Module 2]<br>
+      <b>[Module 2]</b><br>
       Habbit Tracker
     </td>
   </tr>
