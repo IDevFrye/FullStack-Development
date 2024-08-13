@@ -73,6 +73,38 @@ This repository contains projects and exercises completed in the process of self
     </td>
   </tr>
 </table>
+
+`HTML5` `Bootstrap 5` 
+<table>
+  <tr>
+    <td rowspan="4" align="center">
+      <a href="https://github.com/IDevFrye/FullStack-Development/tree/main/%D0%98%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D1%8B%D0%B5%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B/%5BModule%202%20JS%5D%20Course%20Work"><img src="https://static-00.iconduck.com/assets.00/github-icon-512x512-bgdhvgjm.png" width="30"/>
+      <a href="https://pixso.net/app/editor/h2eynkTlaP2VXFT_T-yG2Q?icon_type=1&page-id=0%3A1"><img src="https://cms.pixso.net/images/download/px-logo.png" width="30"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>[Module 3]</b><br>
+      Online course visit card
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>HTML</b>
+    </td>
+    <td>
+      DHTML, Events
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Bootstrap 5</b>
+    </td>
+    <td>
+      Flexbox, Dynamic classes 
+    </td>
+  </tr> 
+</table>
       
 ## :open_file_folder:Folder designations
 1. [Frontend] HTML5 + CSS3
