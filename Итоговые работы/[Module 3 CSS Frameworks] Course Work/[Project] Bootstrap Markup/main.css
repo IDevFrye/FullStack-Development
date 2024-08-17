@@ -81,6 +81,9 @@
 header.bg-secondary {
     background-color: var(--secondary-color) !important;
 }
+footer.bg-primary {
+    background-color: var(--primary-color) !important;
+}
 
 .img {
     width: 26px;
@@ -95,6 +98,16 @@ i.fa {
 i.fa:hover {
     font-size: 24px;
     color: var(--light-gray-color);
+}
+
+i.fa-itog {
+    font-size: 50px;
+    color: var(--secondary-color);
+}
+
+i.fa-itog:hover {
+    font-size: 50px;
+    color: var(--accent-color);
 }
 
 i.text-gray {
@@ -142,13 +155,20 @@ a.text-tertiary:hover {
     color: var(--accent-color) !important;
 }
 
-
 /* Иконки и заголовки */
 h2 {
     color: var(--primary-color);
     font-weight: bold;
 }
 
+h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+h2.text-secondary {
+    color: var(--secondary-color) !important;
+}
 
 p {
     color: var(--primary-color);
@@ -156,4 +176,90 @@ p {
 
 p.desc {
     color: var(--tertiary-color);
+}
+
+p.foot {
+    color: var(--light-gray-color);
+}
+
+.custom-accordion-button::after {
+    content: none;
+}
+
+.custom-accordion-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    text-align: left;
+    padding-left: 2.5rem;
+    position: relative;
+    width: 100%;
+}
+
+.custom-accordion-button:hover {
+    text-decoration: underline;
+}
+
+.custom-accordion-button::before {
+    content: '\25BC';
+    color: var(--primary-color);
+    position: absolute;
+    left: 1rem;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-accordion-button:not(.collapsed)::before {
+    transform: rotate(-180deg);
+}
+
+.custom-accordion-button:not(.collapsed) {
+    color: var(--secondary-color);
+    background-color: transparent;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 1px var(--secondary-color);
+}
+
+.custom-accordion-button {
+    width: 100%;
+    white-space: normal;
+}
+
+.accordion-body {
+    color: var(--primary-color);
+}
+
+.accordion-header>button{
+    font-size: 18px;
+}
+
+.accordion-item {
+    width: 100%;
+}
+
+.review-text {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.author-info {
+    color: var(--tertiary-color);
+    
+    font-weight: bold;
+}
+
+.author-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    font-size: 2.5em;
+    color: var(--gray-color);
 }

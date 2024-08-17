@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Самостоятельная работа 4.4 Bootstrap 5</title>
+    <title>Bootstrap 5</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
         integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,14 +25,13 @@
             </ul>
         </div>
     </header>
-    <section class="bg-light">
+    <section class="bg-light pb-5">
         <div class="container pb-5">
-            <ul
-                class="nav col-12 col-lg-auto my-2 justify-content-end my-md-0 text-small align-items-center text-tertiary fw-medium">
-                <li><a href="#" class="nav-link text-tertiary">О КУРСЕ</a></li>&bull;
-                <li><a href="#" class="nav-link text-tertiary">ПРЕПОДАВАТЕЛИ</a></li>&bull;
-                <li><a href="#" class="nav-link text-tertiary">ОТЗЫВЫ</a></li>&bull;
-                <li><a href="#" class="nav-link text-tertiary">ВОПРОСЫ</a></li>
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-end my-md-0 text-small align-items-center text-tertiary fw-medium">
+                <li><a href="#about" class="nav-link text-tertiary">О КУРСЕ</a></li>&bull;
+                <li><a href="#tutors" class="nav-link text-tertiary">ПРЕПОДАВАТЕЛИ</a></li>&bull;
+                <li><a href="#reviews" class="nav-link text-tertiary">ОТЗЫВЫ</a></li>&bull;
+                <li><a href="#questions" class="nav-link text-tertiary">ВОПРОСЫ</a></li>
             </ul>
         </div>
         <div class="container d-flex flex-column">
@@ -49,6 +48,7 @@
     </section>
     <section class="py-5">
         <div class="container">
+            <a id="about"></a>
             <h2 class="text-center fw-bold mb-5 display-6" style="font-family: Philosopher;">О КУРСЕ</h2>
             <p class="text-center">На курсе Вы научитесь работать с компьютерной программой Adobe illustrator, выполняя реальные<br>
             проекты с первого дня обучения. Понимание теории в основном происходит через практику. Шаг за<br>
@@ -61,7 +61,7 @@
             </p>
             <div class="row text-center mt-5">
                 <div class="col-md-4">
-                    <i class="fa-solid fa-file-signature text-gray "></i>
+                    <i class="fa-solid fa-file-signature text-gray"></i>
                     <p class="fw-bold my-3" style="font-family: Philosopher; font-size: 24px;">Выдаваемый документ</p>
                     <p class="desc fw-medium">Удостоверение о повышении<br>квалификации</p>
                 </div>
@@ -78,44 +78,184 @@
             </div>
         </div>
     </section>
-        <!-- <div class="row">
-            <div class="col-12">
-                <div class="d-flex mt-5">
-                    <div class="col-3 me-3 rounded-0 bg-info" style="width: 70px; height: 70px;"></div>
-                    <div>
-                        <h6 class="text-primary">Вася Пупкин</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem
-                                harum asperiores magnam dolore tempore atque quia?</p>
-                            <a href="#"
-                                class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Ответить</a>
-                    </div>
-                </div>
+    <section class="py-5 bg-light">
+        <div class="container d-flex justify-content-center flex-column align-items-center">
+            <h2 class="fw-bold mb-5 display-6" style="font-family: Philosopher;">ПРЕИМУЩЕСТВА</h2>
+            <div class="row d">
+                <ul class="text-left fw-normal" style="font-size: 22px;">
+                    <li class="list-group-item">
+                        <p><i class="fa-regular fa-circle-check me-4"></i>
+                        Обучение в престижном ВУЗе</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><i class="fa-regular fa-circle-check me-4"></i>
+                        Гибкие условия оплаты</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><i class="fa-regular fa-circle-check me-4"></i>
+                        Возможность тестового периода обучения</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><i class="fa-regular fa-circle-check me-4"></i>
+                        Индивидуальный график</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><i class="fa-regular fa-circle-check me-4"></i>
+                        Портфолио по окончании курса</p>
+                    </li>
+                    <li class="list-group-item">
+                        <p><i class="fa-regular fa-circle-check me-4"></i>
+                        Практикующие преподаватели</p>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex mt-5">
-                    <div class="col-3 me-3 rounded-0 bg-info" style="width: 70px; height: 70px;"></div>
-                    <div>
-                        <h6 class="text-primary">Петя Васечкин</h3>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem
-                                harum asperiores magnam dolore tempore atque quia?</p>
-                            <a href="#"
-                                class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Ответить</a>
-                            <div class="d-flex mt-4">
-                                <div class="col-3 me-3 rounded-0 bg-info" style="width: 70px; height: 70px;"></div>
-                                <div>
-                                    <h6 class="text-primary">Вася Пупкин</h3>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                                            voluptatem harum asperiores magnam dolore tempore atque quia?</p>
-                                        <a href="#"
-                                            class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Ответить</a>
-                                </div>
-                            </div>
+    </section>
+    <section class="py-5">
+        <div class="container d-flex justify-content-center flex-column">
+            <a id="questions"></a>
+            <h2 class="fw-bold mb-5 display-6 text-center" style="font-family: Philosopher;">ВОПРОСЫ</h2>
+            <div class="accordion mb-5" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed custom-accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Могу ли я оплатить не всю сумму сразу, а платить в течение всего срока обучения? И как происходит
+                            оплата?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Да, конечно! У нас предусмотрена поэтапная оплата обучения. Вы можете разбить сумму на 2-8 частей.
+                            График платежей будет указан при заключении договора. Стоимость курса при этом остается постоянной на
+                            весь срок обучения. Реквизиты счета будут указаны в договоре на обучение.
+                        </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed custom-accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Отличается ли диплом при прохождении курса в очной форме и в режиме экстерната?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ответ на этот вопрос...
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed custom-accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Когда начинается дистанционное обучение?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ответ на этот вопрос...
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="row d text-center">
+                <h2 class="fw-bold mb-3 text-secondary" style="font-family: Philosopher;font-size: 28px;">Не нашли ответа на свой вопрос?</h2>
+                <a class="fw-bold mb-5 text-primary" style="font-family: Philosopher;font-size: 28px; cursor:pointer;">Спросите здесь</a>
             </div>
-        </div> -->
+        </div>
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container d-flex justify-content-center flex-column">
+            <a id="reviews"></a>
+            <h2 class="fw-bold mb-5 display-6 text-center" style="font-family: Philosopher;">ОТЗЫВЫ</h2>
+            <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="text-center">
+                                <p class="review-text col-md-8 offset-md-2">
+                                    «Будучи мамой двух детей, я выбрала дистанционную форму обучения по курсу «Дизайн
+                                    и верстка полиграфической продукции» и училась ежедневно, пока дети были в школе.
+                                    Обучение заняло у меня чуть больше 6 месяцев. Очень понравилась практическая
+                                    направленность обучения - ты с первого дня творишь! Сначала простые объекты, а потом
+                                    целые брендбуки. Здорово, что есть видео-поддержка одного из самых сложных курсов -
+                                    CorelDraw. Очень благодарна Александру Викторовичу за оперативность, справедливую
+                                    критику и очень полезные советы. Я считаю его своим наставником и даже закончив
+                                    курс, иногда прошу его оценить мои работы, но уже не учебные, а настоящие. Меня очень
+                                    увлек фриланс. Он позволяет совмещать работу и семейные хлопоты, позволяет
+                                    развиваться и самореализоваться. Одним словом - СПАСИБО!»
+                                </p>
+                                <div class="author">
+                                    <img src="./images/author.jpg" class="rounded-circle author-image"
+                                        alt="author image">
+                                    <p class="author-info fw-normal" style="font-family: Philosopher; font-size: 24px;">Ольга Воронцова<br>выпуск 2015</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="text-center">
+                                <p class="review-text col-md-8 offset-md-2 italic">
+                                    Прежде чем заняться генерацией письма, необходимо транспилировать React-файлы, воспользовавшись Babel. Если во время
+                                    запроса файла компонента возникнет ошибка, то избавьтесь от JSX и ES6-кода.
+                                    Я рекомендую собирать этот проект как отдельный git-репозиторий и устанавливать его через npm в виде зависимости. Такой
+                                    подход позволит запускать процесс транспиляции при помощи npm install.
+                                    Прежде чем заняться генерацией письма, необходимо транспилировать React-файлы, воспользовавшись Babel. Если во время
+                                    запроса файла компонента возникнет ошибка, то избавьтесь от JSX и ES6-кода.
+                                    Я рекомендую собирать этот проект как отдельный git-репозиторий и устанавливать его через npm в виде зависимости. Такой
+                                    подход позволит запускать процесс транспиляции при помощи npm install.
+                                </p>
+                                <div class="author">
+                                    <img src="./images/author.jpg" class="rounded-circle author-image" alt="author image">
+                                    <p class="author-info fw-normal" style="font-family: Philosopher; font-size: 24px;">Ирина
+                                        Машина<br>выпуск 2015</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa-solid fa-circle-arrow-left"></i></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><i
+                            class="fa-solid fa-circle-arrow-right"></i></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <a id="tutors"></a>
+        <div class="container d-flex justify-content-center flex-column">
+            <h2 class="text-center fw-bold mb-5 display-6" style="font-family: Philosopher;">СВЯЗАТЬСЯ С НАМИ</h2>
+            <div class="row col-8 offset-2 d-flex align-items-center justify-content-between mb-5">
+                <p class="col-auto fw-medium mb-0" style="font-size: 20px;">Образовательный центр</p>
+                <img class="col-auto" src="./images/arrow.png" alt="Стрелка" style="width: 200px;">
+                <a class="fw-medium text-secondary col-auto" href="#" style="font-size: 20px;">Перейти на основной сайт</a>
+            </div>
+            <h3 class="text-center fw-medium mb-5">Мы в соц.сетях</h3>
+            <ul class="nav col-12 col-lg-auto mt-2 mb-5 justify-content-center my-md-0 text-small gap-3">
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-vk fa-itog"></i></a></li>
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-square-facebook fa-itog"></i></a></li>
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-instagram fa-itog"></i></a></li>
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-twitter fa-itog"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <footer class="bg-primary py-3 footer">
+        <div class="container d-flex flex-column flex-wrap">
+            <p class="foot">© 2018 Образовательный центр</p>
+            <p class="foot">Любое использование материалов допускается только при соблюдении правил перепечатки и при наличии гиперссылки</p>
+            <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-gray fw-normal">Политика организации в отношении обработки персональных данных образовательного центра</a>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
