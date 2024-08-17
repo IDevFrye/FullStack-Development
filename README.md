@@ -84,7 +84,7 @@ This repository contains projects and exercises completed in the process of self
   </tr>
   <tr>
     <td colspan="2">
-      <b>[Module 3]</b><br>
+      <b>[Module 3.1]</b><br>
       Online course visit card
     </td>
   </tr>
@@ -116,7 +116,7 @@ This repository contains projects and exercises completed in the process of self
   </tr>
   <tr>
     <td colspan="2">
-      <b>[Module 3]</b><br>
+      <b>[Module 3.2]</b><br>
       ---------
     </td>
   </tr>
