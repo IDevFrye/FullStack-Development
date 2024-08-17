@@ -1,0 +1,159 @@
+/*Roboto*/
+@font-face {
+    font-weight: 400;
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-style: italic;
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Italic.ttf");
+}
+
+/*Philosopher*/
+@font-face {
+    font-weight: 400;
+    font-family: Philosopher;
+    src: url("./fonts/Philosopher-Regular.ttf");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: Philosopher;
+    src: url("./fonts/Philosopher-Bold.ttf");
+}
+
+/*FontAwesome*/
+@font-face {
+    font-family: FontAwesome;
+    src: url("./fonts/FontAwesome.otf") format("otf"),
+        url("./fonts/fontawesome-webfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: FA;
+    src: url("./fonts/fa-regular-400.ttf");
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: FA;
+    src: url("./fonts/fa-solid-900.ttf");
+}
+
+@font-face {
+    font-weight: 400;
+    font-family: FABrands;
+    src: url("./fonts/fa-brands-400.ttf");
+}
+
+/* Основные цвета */
+:root {
+    --primary-color: #005c7d;
+    --secondary-color: #008daa;
+    --tertiary-color: #06bac5;
+    --gray-color: #d4d0c8;
+    --light-gray-color: #eeeeed;
+    --accent-color: #eb477b;
+}
+
+/* Стили для кнопок */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+header.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.img {
+    width: 26px;
+    height: 29px;
+}
+
+i.fa {
+    font-size: 24px;
+    color: var(--gray-color);
+}
+
+i.fa:hover {
+    font-size: 24px;
+    color: var(--light-gray-color);
+}
+
+i.text-gray {
+    font-size: 56px;
+    color: var(--light-gray-color);
+}
+
+h1.text-primary {
+    color: var(--primary-color) !important;
+}
+/* Стили для ссылок */
+a.text-primary {
+    color: var(--primary-color) !important;
+}
+
+a.text-primary:hover {
+    color: var(--accent-color) !important;
+}
+
+a.text-gray {
+    color: var(--gray-color) !important;
+}
+
+a.text-gray:hover {
+    color: var(--light-gray-color) !important;
+}
+
+a.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+a.text-secondary:hover {
+    color: var(--accent-color) !important;
+}
+
+a.text-tertiary {
+    color: var(--tertiary-color) !important;
+}
+
+ul.text-tertiary {
+    color: var(--tertiary-color) !important;
+}
+
+a.text-tertiary:hover {
+    color: var(--accent-color) !important;
+}
+
+
+/* Иконки и заголовки */
+h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+p {
+    color: var(--primary-color);
+}
+
+p.desc {
+    color: var(--tertiary-color);
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Самостоятельная работа 4.4 Bootstrap 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+        integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/86d1196dac.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="bg-secondary py-3">
+        <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-gray fw-normal">Перейти на сайт образовательного центра</a>
+            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-vk fa"></i></a></li>
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-square-facebook fa"></i></a></li>
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-instagram fa"></i></a></li>
+                <li><a href="#" class="nav-link"><i class="fa-brands fa-twitter fa"></i></a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="bg-light">
+        <div class="container pb-5">
+            <ul
+                class="nav col-12 col-lg-auto my-2 justify-content-end my-md-0 text-small align-items-center text-tertiary fw-medium">
+                <li><a href="#" class="nav-link text-tertiary">О КУРСЕ</a></li>&bull;
+                <li><a href="#" class="nav-link text-tertiary">ПРЕПОДАВАТЕЛИ</a></li>&bull;
+                <li><a href="#" class="nav-link text-tertiary">ОТЗЫВЫ</a></li>&bull;
+                <li><a href="#" class="nav-link text-tertiary">ВОПРОСЫ</a></li>
+            </ul>
+        </div>
+        <div class="container d-flex flex-column">
+            <h1 class="display-5 fw-normal align-self-end text-primary" style="font-family: Philosopher;">Дизайн и верстка полиграфической продукции</h1>
+            <h1 class="display-5 fw-normal align-self-end text-primary" style="font-family: Philosopher;">в ADOBE ILLUSTRATOR</h1>
+        </div>
+        <div class="container d-flex">
+            <img src="./images/main_design.png" alt="" class="col-md-6" style="width:785px; height:auto;">
+            <div class="col-md-6 container d-flex flex-column me-0 align-items-end position-relative" style="width: 390px; margin-top:200px;">
+                <p class="fw-medium" style="font-size:24px; width: 465px;">Повышение квалификации, 35 ак. часов</p>
+                <button class="btn btn-primary btn-lg my-2">Записаться на курс</button>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 display-6" style="font-family: Philosopher;">О КУРСЕ</h2>
+            <p class="text-center">На курсе Вы научитесь работать с компьютерной программой Adobe illustrator, выполняя реальные<br>
+            проекты с первого дня обучения. Понимание теории в основном происходит через практику. Шаг за<br>
+            шагом, в течение обучения, Вы создадите свое портфолио, позволяющее начать работать сразу после<br>
+            окончания курса.
+            </p>
+            <p class="text-center">
+                Очное обучение проходит по расписанию в вечерние часы (18.30-21.50) 1-2 раза в неделю.<br>
+                Дистанционное обучение - по индивидуальному календарному плану.
+            </p>
+            <div class="row text-center mt-5">
+                <div class="col-md-4">
+                    <i class="fa-solid fa-file-signature text-gray "></i>
+                    <p class="fw-bold my-3" style="font-family: Philosopher; font-size: 24px;">Выдаваемый документ</p>
+                    <p class="desc fw-medium">Удостоверение о повышении<br>квалификации</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-graduation-cap text-gray"></i> 
+                    <p class="fw-bold my-3" style="font-family: Philosopher; font-size: 24px;">Форма обучения</p>
+                    <p class="desc fw-medium">Очная<br>Дистанционная</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fa-solid fa-money-bills text-gray"></i>
+                    <p class="fw-bold my-3" style="font-family: Philosopher; font-size: 24px;">Стоимость обучения</p>
+                    <p class="desc fw-medium">Очная форма: 10 000 р.<br>Дистанционная форма: 7 000 р.<br>Возможность поэтапной оплаты</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- <div class="row">
+            <div class="col-12">
+                <div class="d-flex mt-5">
+                    <div class="col-3 me-3 rounded-0 bg-info" style="width: 70px; height: 70px;"></div>
+                    <div>
+                        <h6 class="text-primary">Вася Пупкин</h3>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem
+                                harum asperiores magnam dolore tempore atque quia?</p>
+                            <a href="#"
+                                class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Ответить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex mt-5">
+                    <div class="col-3 me-3 rounded-0 bg-info" style="width: 70px; height: 70px;"></div>
+                    <div>
+                        <h6 class="text-primary">Петя Васечкин</h3>
+                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptatem
+                                harum asperiores magnam dolore tempore atque quia?</p>
+                            <a href="#"
+                                class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Ответить</a>
+                            <div class="d-flex mt-4">
+                                <div class="col-3 me-3 rounded-0 bg-info" style="width: 70px; height: 70px;"></div>
+                                <div>
+                                    <h6 class="text-primary">Вася Пупкин</h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                                            voluptatem harum asperiores magnam dolore tempore atque quia?</p>
+                                        <a href="#"
+                                            class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Ответить</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>
