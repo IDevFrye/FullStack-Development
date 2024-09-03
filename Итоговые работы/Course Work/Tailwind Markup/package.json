@@ -1,0 +1,17 @@
+{
+  "name": "tailwind-markup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build -i ./src/main.css -o ./public/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  }
+}
