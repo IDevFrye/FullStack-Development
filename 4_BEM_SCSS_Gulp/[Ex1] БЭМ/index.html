@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1200" />
+    <title>Системный администратор — Курсы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/86d1196dac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./scripts/modify.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          КУРСЫ ПРОФЕССИОНАЛЬНОЙ<br />ПЕРЕПОДГОТОВКИ
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link" data-section="about">О НАС</a>
+            </li>
+            <li class="nav__item">
+              <a href="#course" class="nav__link" data-section="course"
+                >О КУРСЕ</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link" data-section="contacts"
+                >КОНТАКТЫ</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a href="#signup" class="header__button">ЗАПИСАТЬСЯ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img src="images/background.png" alt="background" class="hero__bg" />
+        <div class="hero__content">
+          <div class="hero__label">Профессия</div>
+          <h1 class="hero__title">СИСТЕМНЫЙ<br />АДМИНИСТРАТОР</h1>
+          <div class="hero__subtitle">
+            Незаменимый специалист в любой компании
+          </div>
+          <a href="#signup" class="hero__button" id="signupButton"
+            >Записаться</a
+          >
+          <div class="hero__info">
+            <div class="hero__info-item">
+              <div class="hero__info-title">Стоимость</div>
+              <div class="hero__info-value">От 2700₽/мес</div>
+            </div>
+            <div class="hero__info-item">
+              <div class="hero__info-title">Продолжительность</div>
+              <div class="hero__info-value">3 месяца</div>
+            </div>
+            <div class="hero__info-item">
+              <div class="hero__info-title">Формат обучения</div>
+              <div class="hero__info-value">Очная</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="info__container">
+          <div class="info__image">
+            <img
+              src="images/main.png"
+              alt="Человек за компьютером"
+              class="info__img"
+            />
+          </div>
+          <div class="info__content">
+            <h2 class="info__title">Кто такой системный администратор</h2>
+            <div class="info__text">
+              Системный администратор обеспечивает бесперебойное
+              функционирование компьютерной техники и программного обеспечения в
+              организации. Он занимается поддержкой серверов, проектирует и
+              администрирует локальную сеть, выдает пользователям доступ к
+              сайтам.<br /><br />
+              Сисадмин — штатный или на аутсорсе — нужен каждой компании, где
+              есть хотя бы один компьютер, поэтому представители этой профессии
+              не испытывают проблем с трудоустройством.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="course" id="course">
+        <div class="course__container-top">
+          <h2 class="course__title">О курсе</h2>
+          <div class="course__text">
+            Курс предназначен для широкого круга слушателей, желающих
+            познакомиться с локальными сетями, понять принципы, по которым они
+            работают, получить знания и навыки по их построению. Слушатели также
+            познакомятся с основополагающими принципами работы ОС Windows в
+            локальной сети. Курс является базовым в обучении технических
+            специалистов и предполагает обучение фундаментальным принципам
+            построения локальных сетей.
+          </div>
+        </div>
+        <div class="course__container-bottom">
+          <div class="course__content">
+            <div class="course__doc">
+              <span class="course__doc-label">Выдаваемый документ</span><br />
+              <span class="course__doc-text"
+                >Диплом о профессиональной переподготовке<br />
+                с присвоением квалификации</span
+              >
+            </div>
+          </div>
+          <a href="#" class="course__button">САЙТ ОБРАЗОВАТЕЛЬНОГО ЦЕНТРА</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="footer__container">
+        <div class="footer__social">
+          <a href="#" class="footer__social-link"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="fa-brands fa-vk"></i
+          ></a>
+          <a href="#" class="footer__social-link"
+            ><i class="fa-brands fa-square-youtube"></i
+          ></a>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__address">
+            098773 Санкт Петербург,<br />ул. Бассейная, д 23
+          </div>
+          <div class="footer__email">sys-adm@gmail.com</div>
+          <div class="footer__phone">8-800-321-43-23</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

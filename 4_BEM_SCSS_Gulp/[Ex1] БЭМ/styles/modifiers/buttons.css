@@ -1,0 +1,23 @@
+/* Ховер-эффект для всех кнопок */
+.header__button:hover,
+.hero__button:hover,
+.course__button:hover {
+  background: #ff2e4c;
+}
+
+/* Модификатор активного состояния (нажатие) */
+.header__button--active,
+.hero__button--active,
+.course__button--active {
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Модификатор disabled */
+.header__button--disabled,
+.hero__button--disabled,
+.course__button--disabled {
+  background: #bdbdd1 !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}

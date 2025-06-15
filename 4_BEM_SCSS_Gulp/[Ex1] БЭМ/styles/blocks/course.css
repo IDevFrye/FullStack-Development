@@ -1,0 +1,108 @@
+/* Блок Course */
+.course {
+  background: #160f62;
+  padding: 60px 0 215px 0;
+}
+
+.course__container-top {
+  max-width: 1200px;
+  margin: 0 355px 0 352px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+  flex-direction: column;
+}
+
+.course__content {
+  flex: 1;
+}
+
+.course__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 6px 0px 49px -9px;
+  position: relative;
+}
+
+.course__title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 63px;
+  background: #ff5c70;
+  border-radius: 0px;
+  margin-left: 8px;
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-bottom: -14px;
+}
+
+.course__text {
+  font-size: 26px;
+  color: #e0e0f0;
+  margin-bottom: 32px;
+  letter-spacing: 1.1px;
+  line-height: 1.4;
+  margin-left: 6px;
+}
+
+.course__container-bottom {
+  max-width: 1200px;
+  margin: 0 367px 0 352px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+  flex-direction: row;
+}
+
+.course__doc {
+  margin-bottom: 32px;
+}
+
+.course__doc-label {
+  color: #fff;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.2px;
+}
+
+.course__doc-label::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 67px;
+  background: #ff5c70;
+  border-radius: 0px;
+  margin-left: 2px;
+  vertical-align: middle;
+  margin-right: 6px;
+  margin-bottom: 17px;
+  margin-top: 5px;
+}
+
+.course__doc-text {
+  color: #bdbdd1;
+  font-size: 27px;
+  letter-spacing: -0.6px;
+  margin-left: 6px;
+  line-height: 1.3;
+}
+
+.course__button {
+  background: #ff5c70;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 33px 39px 42px 41px;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: none;
+  display: inline-block;
+  align-self: flex-end;
+  margin-top: 1px;
+  width: 535px;
+  text-align: center;
+  margin-bottom: 20px;
+}

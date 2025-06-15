@@ -1,0 +1,64 @@
+/* Блок Footer */
+.footer {
+  background: #0e0944;
+  padding: 36px 0 24px 0;
+}
+
+.footer__container {
+  max-width: 1300px;
+  margin: 0 318px 0 357px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.footer__social {
+  display: flex;
+  gap: 21px;
+  margin-bottom: 7px;
+}
+
+.footer__social-link {
+  text-decoration: none;
+}
+
+.footer__social-link i {
+  font-size: 41px;
+  display: block;
+  color: #ff2e4c;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 8px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.footer__address {
+  color: #bdbdd1;
+  font-size: 24px;
+  margin-bottom: 2px;
+  margin-right: 106px;
+  margin-top: 8px;
+  letter-spacing: -0.9px;
+}
+
+.footer__email {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 175px;
+  letter-spacing: -1px;
+  padding-bottom: 26px;
+}
+
+.footer__phone {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin-left: 21px;
+  margin-top: 13px;
+  padding-bottom: 26px;
+}

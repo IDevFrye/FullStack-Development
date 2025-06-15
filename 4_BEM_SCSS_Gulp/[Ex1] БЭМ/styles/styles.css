@@ -1,0 +1,24 @@
+/* Импорт всех блоков */
+@import url("./blocks/header.css");
+@import url("./blocks/hero.css");
+@import url("./blocks/info.css");
+@import url("./blocks/course.css");
+@import url("./blocks/footer.css");
+
+/* Импорт модификаторов */
+@import url("./modifiers/buttons.css");
+@import url("./modifiers/nav.css");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: #0e0944;
+  color: #fff;
+  min-width: 1200px;
+}

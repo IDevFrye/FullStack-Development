@@ -1,0 +1,63 @@
+/* Блок Header */
+.header {
+  background: #0e0944;
+  padding: 0;
+}
+
+.header__container {
+  max-width: 1760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 87px;
+  position: relative;
+}
+
+.header__logo {
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  margin-left: 31px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin-left: 525px;
+}
+
+.nav__item {
+  margin-bottom: 10px;
+}
+
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  padding: 0px 24px;
+}
+
+.nav__link:hover {
+  color: #ff5c70;
+}
+
+.header__button {
+  background: #ff5c70;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 40px;
+  padding: 18px 46px 27px 57px;
+  text-decoration: none;
+  margin-left: 40px;
+  transition: background 0.2s;
+  border: none;
+  display: inline-block;
+}

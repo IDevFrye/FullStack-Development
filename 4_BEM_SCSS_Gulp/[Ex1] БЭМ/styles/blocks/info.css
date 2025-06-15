@@ -1,0 +1,61 @@
+/* Блок Info */
+.info {
+  background: #0e0944;
+  padding: 77px 0 135px 0;
+}
+
+.info__container {
+  max-width: 1400px;
+  margin: 0px 130px 0 403px;
+  display: flex;
+  align-items: flex-start;
+  gap: 84px;
+  justify-content: center;
+}
+
+.info__image {
+  flex: 0 0 341px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.info__img {
+  width: 470px;
+  height: auto;
+  display: block;
+}
+
+.info__content {
+  flex: 1;
+  color: #fff;
+}
+
+.info__title {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 17px;
+  padding-bottom: 5px;
+}
+
+.info__title::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 63px;
+  background: #ff5c70;
+  border-radius: 0px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.info__text {
+  font-size: 28px;
+  font-weight: 100;
+  color: #e0e0f0;
+  line-height: 1.3;
+  margin-left: 20px;
+  margin-top: 35px;
+}
